@@ -14,7 +14,7 @@ class Robot {
 	private:
 
 		char* _direction;
-		Etat _e;
+		Etat etat;
 		Objet _objet;
 		int _x;
 		int _y;

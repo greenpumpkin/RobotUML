@@ -28,7 +28,7 @@ void Robot::avancer(int x, int y)
 void Robot::tourner(char* direction){
 	
     try {
-        _e.tourner(direction);
+        etat = etat.tourner(direction);
         _direction = direction;
     }
     catch (Etat::Action_Impossible) {
@@ -39,8 +39,7 @@ void Robot::tourner(char* direction){
 void Robot::saisir(Objet o)
 {
 	try {
-        Etat newEtat = _e.saisir();
-        _e = newEtat;
+        etat = etat.saisir();
         _objet = o;
     }
     catch (Etat::Action_Impossible) {
@@ -51,16 +50,23 @@ void Robot::saisir(Objet o)
 void Robot::poser()
 {
     try {
-        Etat newEtat = _e.poser();
-        _e = newEtat;
+       etat = etat.poser();
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état. \n";
     }
 }
 
-
-/**int peser();
+int Robot::peser()
+{
+    try {
+       etat = etat.peser();
+    }
+    catch(Etat::Action_Impossible) {
+        cerr << "Action impossible vu l'état. \n";
+    }
+}
+/**
 rencontrerPlot(Plot p);
 int evaluerPlot();
 figer();
