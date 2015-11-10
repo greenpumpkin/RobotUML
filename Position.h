@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#ifndef position_h
-#define position_h
+#ifndef POSITION_H
+#define POSITION_H
 
 class Position {
 

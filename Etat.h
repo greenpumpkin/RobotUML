@@ -1,12 +1,17 @@
 #include <iostream>
 #include <string>
+#include "Plot.h"
 
-#ifndef etat_h
-#define etat_h
+#ifndef ETAT_H
+#define ETAT_H
 
 class Etat {
 
 	public:
+
+		//Exception
+		class Action_Impossible {};
+
 		Etat avancer(int x, int y);
 		Etat evaluerPlot();
 		Etat tourner(char* direction);

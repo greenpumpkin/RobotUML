@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#ifndef plot_h
-#define plot_h
+#ifndef PLOT_H
+#define PLOT_H
 
 class Plot {
 

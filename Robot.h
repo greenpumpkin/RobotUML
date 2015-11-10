@@ -1,34 +1,40 @@
-#ifndef _date_h
-#define _date_h
-
 #include <iostream>
 #include <string>
 #include <cctype>
 #include <vector>
-#include "Etat.h"
 #include "Objet.h"
+#include "Etat.h"
+#include "Plot.h"
+
+#ifndef ROBOT_H
+#define ROBOT_H
 
 class Robot {
+	
 	private:
-		String _direction;
-		Etat e;
-		Objet objet;
-		int xPos;
-		int yPos;
-	public: 
-		Robot(int x, int y);
-		Robot();
-		avancer(int x, int y);
-		tourner(String direction);
-		saisir(Objet o);
-		poser();
-		int peser();
-		rencontrerPlot(Plot p);
-		int evaluerPlot();
-		figer();
-		repartir();
-		afficher();
-		class Action_Impossible{};
-};
 
+		char* _direction;
+		Etat _e;
+		Objet _objet;
+		int _x;
+		int _y;
+
+	public: 
+
+		//Constructeurs
+		Robot();
+		Robot(int x, int y);
+
+		//Méthodes
+		void avancer(int x, int y);
+		void tourner(char* direction);
+		void saisir(Objet o);
+		void poser();
+		int peser();
+		void rencontrerPlot(Plot p);
+		int evaluerPlot();
+		void figer();
+		void repartir();
+		void afficher();
+};
 #endif

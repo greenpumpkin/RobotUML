@@ -3,49 +3,66 @@
 #include <string>
 #include <cctype>
 #include <vector>
-#include "Date.h"
+#include "Robot.h"
 
 using namespace std;
 
-Robot::Robot(int x, int y){
-	xPos=x;
-	yPos=y;
+Robot::Robot(int x, int y)
+{
+	_x = x;
+	_y = y;
 }
 
-Robot::Robot(){
-	xPos=0;
-	yPos=0;
+Robot::Robot()
+{
+	_x = 0;
+	_y = 0;
 }
 
-Robot::avancer(int x, int y){
-	xPos=x;
-	yPos=y;
+void Robot::avancer(int x, int y)
+{
+	_x = x;
+	_y = y;
 }
 
-tourner(String direction){
-	try { 
-        e.tourner(direction);
-        _direction=direction; 
-    } 
-    catch (Robot::Action_Impossible) { 
-    	cerr << "Action impossible dans cet état. \n";
-    }  
+void Robot::tourner(char* direction){
+	
+    try {
+        _e.tourner(direction);
+        _direction = direction;
+    }
+    catch (Etat::Action_Impossible) {
+    	cerr << "Action impossible vu l'état. \n";
+    }
 }
 
-saisir(Objet o){
-	try { 
-        Etat newEtat= e.saisir();
-        e=newEtat;
-        objet=o; 
-    } 
-    catch (Robot::Action_Impossible) { 
-    	cerr << "Action impossible dans cet état. \n";
-    }  
+void Robot::saisir(Objet o)
+{
+	try {
+        Etat newEtat = _e.saisir();
+        _e = newEtat;
+        _objet = o;
+    }
+    catch (Etat::Action_Impossible) {
+    	cerr << "Action impossible vu l'état. \n";
+    }
 }
-poser();
-int peser();
+
+void Robot::poser()
+{
+    try {
+        Etat newEtat = _e.poser();
+        _e = newEtat;
+    }
+    catch(Etat::Action_Impossible) {
+        cerr << "Action impossible vu l'état. \n";
+    }
+}
+
+
+/**int peser();
 rencontrerPlot(Plot p);
 int evaluerPlot();
 figer();
 repartir();
-afficher();
+afficher();**/
