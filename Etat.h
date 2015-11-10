@@ -12,10 +12,10 @@ class Etat {
 		//Exception
 		class Action_Impossible {};
 
-		Etat avancer(int x, int y);
+		Etat avancer();
 		Etat evaluerPlot();
-		Etat tourner(char* direction);
-		Etat rencontrerPlot(Plot p);
+		Etat tourner();
+		Etat rencontrerPlot();
 		Etat poser();
 		Etat saisir();
 		Etat peser();

@@ -1,6 +1,6 @@
 #include "Etat.h"
 
-Etat Etat::avancer(int x, int y)
+Etat Etat::avancer()
 {
 	throw Action_Impossible();
 }
@@ -10,12 +10,12 @@ Etat Etat::evaluerPlot()
 	throw Action_Impossible(); 
 }
 
-Etat Etat::tourner(char* direction) 
+Etat Etat::tourner() 
 {
 	throw Action_Impossible();
 }
 
-Etat Etat::rencontrerPlot(Plot p) 
+Etat Etat::rencontrerPlot() 
 {
 	throw Action_Impossible();
 }

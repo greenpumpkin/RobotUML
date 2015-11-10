@@ -5,6 +5,7 @@
 #include "Objet.h"
 #include "Etat.h"
 #include "Plot.h"
+#include "Position.h"
 
 #ifndef ROBOT_H
 #define ROBOT_H
@@ -13,9 +14,11 @@ class Robot {
 	
 	private:
 
+		Etat *etat;
 		char* _direction;
-		Etat etat;
 		Objet _objet;
+		Position _position;
+		Plot _plot;
 		int _x;
 		int _y;
 
