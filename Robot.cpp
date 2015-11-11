@@ -61,10 +61,12 @@ int Robot::peser()
 {
     try {
        *etat = etat->peser();
+       return _objet.getPoids();
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
     }
+    return -1;
 }
 
 void Robot::rencontrerPlot(Plot p)
@@ -82,10 +84,12 @@ int Robot::evaluerPlot()
 {
     try {
        *etat = etat->evaluerPlot();
+       return _plot.getHauteur();
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
     }
+    return -1;
 }
 
 void Robot::figer()
