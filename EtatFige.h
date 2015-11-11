@@ -19,6 +19,6 @@ class EtatFige : public Etat {
 		//Méthode pour récupérer l'instance de la classe
 		static EtatFige *getInstance();
 		static void setEtat(Etat*); 
-		Etat repartir();
+		Etat *repartir();
 };
 #endif

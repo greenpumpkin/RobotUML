@@ -9,14 +9,11 @@ class EtatEnRoute : public Etat {
 
 	private:
 		static EtatEnRoute *instance;
-
 	protected:
 		EtatEnRoute();
-	
 	public:
-
 		//Méthode pour récupérer l'instance de la classe
 		static EtatEnRoute *getInstance();
-		Etat figer();
+		Etat *figer();
 };
 #endif
