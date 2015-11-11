@@ -1,4 +1,22 @@
 #include "Etat.h"
+#include "EtatFige.h"
+
+Etat *Etat::instance = new Etat();
+Etat *Etat::premierEtat;
+
+Etat::Etat() 
+{}
+
+Etat * Etat::getInstance() 
+{
+	return instance;
+}
+
+Etat * Etat::getPremierEtat()
+{
+	premierEtat = EtatFige::getInstance();
+	return premierEtat;
+}
 
 Etat Etat::avancer()
 {
