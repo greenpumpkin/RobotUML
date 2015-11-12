@@ -7,20 +7,7 @@
 
 class Etat {
 
-	private:
-		static Etat *instance;
-		static Etat *premierEtat;
-
-	protected:
-		Etat();
-
 	public:
-
-		//Méthode pour récupérer l'instance de la classe
-		static Etat *getInstance();
-		//Accesseur
-		static Etat *getPremierEtat();
-
 		//Exception
 		class Action_Impossible {};
 

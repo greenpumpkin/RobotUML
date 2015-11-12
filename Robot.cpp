@@ -21,8 +21,14 @@ Robot::Robot()
 
 void Robot::avancer(int x, int y)
 {
-	_x = x;
-	_y = y;
+    try {
+        *etat = etat->avancer();
+        _x= x;
+        _y = y;
+    }
+    catch (Etat::Action_Impossible) {
+        cerr << "Action impossible vu l'état." << endl;
+    }
 }
 
 void Robot::tourner(char* direction){

@@ -9,15 +9,15 @@ EtatFige::EtatFige()
 
 EtatFige * EtatFige::getInstance()
 {
-return instance;
+	return instance;
 }
 
 void EtatFige::setEtat(Etat* nouvelEtat)
 {
-ancienEtat = nouvelEtat;
+	ancienEtat = nouvelEtat;
 }
 
 Etat *EtatFige::repartir()
 {
-return ancienEtat;
+	return ancienEtat;
 }
