@@ -7,9 +7,12 @@ using namespace std;
 
 int main()
 {
-	Robot * r0bis = new Robot(3, 4);
-	//r0bis->avancer(2,2);
-	r0bis->afficher();
+	Robot * r0 = new Robot(3, 4);
+	r0->afficher();
+
+	Plot p;
+	r0->rencontrerPlot(p);
+	r0->afficher();
 
 
     return 0;

@@ -19,12 +19,12 @@ Etat * EtatAVide::avancer()
 	return instance;
 }
 
-Etat * EtatAVide::rencontrerPlot()
-{
-	return EtatAVideFacePlot::getInstance();
-}
-
 Etat * EtatAVide::tourner()
 {
 	return instance;
+}
+
+Etat * EtatAVide::rencontrerPlot()
+{
+	return EtatAVideFacePlot::getInstance();
 }
