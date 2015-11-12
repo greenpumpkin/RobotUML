@@ -14,6 +14,9 @@ int main()
 	r0->rencontrerPlot(p);
 	r0->afficher();
 
+	Objet o;
+	r0->saisir(o);
+	r0->afficher();
 
     return 0;
 }

@@ -22,15 +22,15 @@ class Etat {
 		class Action_Impossible {};
 
 		static Etat *getPremierEtat();
-		Etat *avancer();
-		Etat *evaluerPlot();
-		Etat *tourner();
-		Etat *rencontrerPlot();
-		Etat *poser();
-		Etat *saisir();
-		Etat *peser();
-		Etat *figer();
-		Etat *repartir();
+		virtual Etat *avancer();
+		virtual Etat *evaluerPlot();
+		virtual Etat *tourner();
+		virtual Etat *rencontrerPlot();
+		virtual Etat *poser();
+		virtual Etat *saisir();
+		virtual Etat *peser();
+		virtual Etat *figer();
+		virtual Etat *repartir();
 		string getNom();
 
 };
