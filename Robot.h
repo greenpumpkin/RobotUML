@@ -15,7 +15,7 @@ class Robot {
 	private:
 
 		Etat *etat;
-		char* _direction;
+		string _direction;
 		Objet _objet;
 		Position _position;
 		Plot _plot;
@@ -28,7 +28,7 @@ class Robot {
 
 		//Méthodes
 		void avancer(int x, int y);
-		void tourner(char* direction);
+		void tourner(string direction);
 		void saisir(Objet o);
 		void poser();
 		int peser();

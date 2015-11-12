@@ -6,18 +6,16 @@
 #include "Robot.h"
 #include "EtatAVide.h"
 
-using namespace std;
-
 Robot::Robot(int x, int y)
 {
-    *etat = EtatAVide();
+    etat = Etat::getPremierEtat();
     _position.setX(x);
     _position.setY(y);
 }
 
 Robot::Robot()
 {
-    *etat = EtatAVide();
+    etat = Etat::getPremierEtat();
     _position.setX(0);
     _position.setY(0);
 }
@@ -34,7 +32,7 @@ void Robot::avancer(int x, int y)
     }
 }
 
-void Robot::tourner(char* direction){
+void Robot::tourner(string direction){
 	
     try {
         *etat = etat->tourner();
