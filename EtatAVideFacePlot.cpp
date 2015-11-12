@@ -1,7 +1,9 @@
 #include "Robot.h"
 #include "Etat.h"
 #include "EtatEnRoute.h"
+#include "EtatAVide.h"
 #include "EtatAVideFacePlot.h"
+#include "EtatEnChargeFacePlot.h"
 
 EtatAVideFacePlot * EtatAVideFacePlot::instance = new EtatAVideFacePlot();
 
@@ -18,7 +20,12 @@ Etat * EtatAVideFacePlot::evaluerPlot()
 	return instance;
 }
 
-/**Etat * EtatAVideFacePlot::saisir()
+Etat * EtatAVideFacePlot::saisir()
 {
 	return EtatEnChargeFacePlot::getInstance();
-}**/
+}
+
+Etat * EtatAVideFacePlot::tourner()
+{
+	return EtatAVide::getInstance();
+}

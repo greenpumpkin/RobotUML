@@ -22,3 +22,8 @@ Etat * EtatAVide::rencontrerPlot()
 {
 	return EtatAVideFacePlot::getInstance();
 }
+
+Etat * EtatAVide::tourner()
+{
+	return instance;
+}

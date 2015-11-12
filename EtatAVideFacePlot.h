@@ -18,6 +18,7 @@ class EtatAVideFacePlot : public EtatEnRoute {
 		static EtatAVideFacePlot *getInstance();
 		Etat *evaluerPlot();
 		Etat *saisir();
+		Etat *tourner();
 
 };
 #endif

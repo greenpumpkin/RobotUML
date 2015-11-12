@@ -2,20 +2,20 @@
 
 int Position::getX() 
 {
-	return this->x;
+	return x;
 }
 
 int Position::getY() 
 {
-	return this->y;
+	return y;
 }
 
-void Position::setX(int x)
+void Position::setX(int hor)
 {
-	this->x = x;
+	x = hor;
 }
 
-void Position::setY(int y)
+void Position::setY(int ver)
 {
-	this->y = y;
+	y = ver;
 }

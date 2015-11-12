@@ -19,6 +19,7 @@ class EtatAVide : public EtatEnRoute {
 		static EtatAVide *getInstance();
 		Etat *avancer();
 		Etat *rencontrerPlot();
+		Etat *tourner();
 
 };
 #endif

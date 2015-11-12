@@ -4,6 +4,7 @@
 #include <cctype>
 #include <vector>
 #include "Robot.h"
+#include "EtatAVide.h"
 
 using namespace std;
 
@@ -11,20 +12,22 @@ Robot::Robot(int x, int y)
 {
 	_x = x;
 	_y = y;
+    etat = EtatAVide::getInstance();
 }
 
 Robot::Robot()
 {
 	_x = 0;
 	_y = 0;
+    etat = EtatAVide::getInstance();
 }
 
 void Robot::avancer(int x, int y)
 {
     try {
         *etat = etat->avancer();
-        _x= x;
-        _y = y;
+        _position.setX(x);
+        _position.setY(y);
     }
     catch (Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
@@ -119,4 +122,8 @@ void Robot::repartir()
 }
 
 void Robot::afficher()
-{}
+{
+    cout << "Position (X) : " << _position.getX() << endl;
+    cout << "Position (Y) : " << _position.getY() << endl;
+    cout << "Poids objet : " << _objet.getPoids() << endl;
+}

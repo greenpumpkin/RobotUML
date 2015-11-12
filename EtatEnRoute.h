@@ -8,6 +8,6 @@
 class EtatEnRoute : public Etat {
 
 	public:
-		Etat * figer();
+		Etat *figer();
 };
 #endif
