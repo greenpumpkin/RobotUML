@@ -7,10 +7,14 @@
 
 class Etat {
 
+	private:
+		static Etat *premierEtat;
+
 	public:
 		//Exception
 		class Action_Impossible {};
 
+		static Etat *getPremierEtat();
 		Etat avancer();
 		Etat evaluerPlot();
 		Etat tourner();

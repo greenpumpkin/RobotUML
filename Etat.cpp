@@ -1,5 +1,13 @@
 #include "Etat.h"
 #include "EtatFige.h"
+#include "EtatAVide.h"
+
+Etat * Etat::premierEtat = EtatAVide::getInstance();
+
+Etat * Etat::getPremierEtat()
+{
+	return premierEtat;
+}
 
 Etat Etat::avancer()
 {

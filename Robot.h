@@ -19,11 +19,9 @@ class Robot {
 		Objet _objet;
 		Position _position;
 		Plot _plot;
-		int _x;
-		int _y;
+		
 
 	public: 
-
 		//Constructeurs
 		Robot();
 		Robot(int x, int y);
@@ -39,5 +37,6 @@ class Robot {
 		void figer();
 		void repartir();
 		void afficher();
+		Etat getEtat();
 };
 #endif

@@ -10,16 +10,14 @@ using namespace std;
 
 Robot::Robot(int x, int y)
 {
-	_x = x;
-	_y = y;
-    etat = EtatAVide::getInstance();
+    _position.setX(x);
+    _position.setY(y);
 }
 
 Robot::Robot()
 {
-	_x = 0;
-	_y = 0;
-    etat = EtatAVide::getInstance();
+    _position.setX(0);
+    _position.setY(0);
 }
 
 void Robot::avancer(int x, int y)
@@ -121,9 +119,11 @@ void Robot::repartir()
     }
 }
 
+Etat Robot::getEtat()
+{
+    return *etat;
+}
+
 void Robot::afficher()
 {
-    cout << "Position (X) : " << _position.getX() << endl;
-    cout << "Position (Y) : " << _position.getY() << endl;
-    cout << "Poids objet : " << _objet.getPoids() << endl;
 }
