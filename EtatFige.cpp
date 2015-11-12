@@ -1,5 +1,9 @@
+#include <iostream>
+#include <string>
 #include "EtatFige.h"
 #include "Robot.h"
+
+using namespace std;
 
 EtatFige * EtatFige::instance = new EtatFige();
 Etat * EtatFige::ancienEtat;
@@ -20,4 +24,9 @@ void EtatFige::setEtat(Etat* nouvelEtat)
 Etat *EtatFige::repartir()
 {
 	return ancienEtat;
+}
+
+string EtatFige::nom() 
+{
+	return "figé";
 }

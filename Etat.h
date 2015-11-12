@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include "Plot.h"
+#include <string>
+
+using namespace std;
 
 #ifndef ETAT_H
 #define ETAT_H
@@ -24,6 +27,7 @@ class Etat {
 		Etat peser();
 		Etat figer();
 		Etat repartir();
+		string nom();
 
 };
 #endif

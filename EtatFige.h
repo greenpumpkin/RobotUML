@@ -2,6 +2,8 @@
 #include <string>
 #include "Etat.h"
 
+using namespace std;
+
 #ifndef ETAT_FIGE_H
 #define ETAT_FIGE_H
 
@@ -20,5 +22,6 @@ class EtatFige : public Etat {
 		static EtatFige *getInstance();
 		static void setEtat(Etat*); 
 		Etat *repartir();
+		string nom();
 };
 #endif

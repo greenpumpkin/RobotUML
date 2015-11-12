@@ -3,6 +3,8 @@
 #include "Etat.h"
 #include "EtatEnRoute.h"
 
+using namespace std;
+
 #ifndef ETAT_EN_CHARGE_H
 #define ETAT_EN_CHARGE_H
 
@@ -20,6 +22,7 @@ class EtatEnCharge : public EtatEnRoute {
 		Etat *tourner();
 		Etat *peser();
 		Etat *rencontrerPlot();
+		string nom();
 
 };
 #endif

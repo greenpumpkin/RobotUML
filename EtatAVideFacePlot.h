@@ -3,6 +3,8 @@
 #include "Etat.h"
 #include "EtatEnRoute.h"
 
+using namespace std;
+
 #ifndef ETAT_A_VIDE_FACE_PLOT_H
 #define ETAT_A_VIDE_FACE_PLOT_H
 
@@ -19,6 +21,7 @@ class EtatAVideFacePlot : public EtatEnRoute {
 		Etat *evaluerPlot();
 		Etat *saisir();
 		Etat *tourner();
+		string nom();
 
 };
 #endif

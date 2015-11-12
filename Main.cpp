@@ -9,8 +9,10 @@ int main()
 {
 	Robot r0(3, 4);
 	Robot * r0bis = new Robot(3, 4);
-	cout << r0bis << endl;
+	r0bis->avancer(2,2);
+	//cout << r0bis << endl;
 	r0bis->afficher();
+
 
     return 0;
 }

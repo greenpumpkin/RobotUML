@@ -10,12 +10,14 @@ using namespace std;
 
 Robot::Robot(int x, int y)
 {
+    *etat = EtatAVide();
     _position.setX(x);
     _position.setY(y);
 }
 
 Robot::Robot()
 {
+    *etat = EtatAVide();
     _position.setX(0);
     _position.setY(0);
 }
@@ -126,4 +128,8 @@ Etat Robot::getEtat()
 
 void Robot::afficher()
 {
+    cout << "Position: (" << _position.getX() << " ; "<< _position.getY() << ")" <<endl;
+    if (_objet.getPoids()!=0)
+        cout << "Poids de l'objet: " << _objet.getPoids() <<endl;
+    cout << "Etat du robot: " << etat->nom() <<endl;
 }

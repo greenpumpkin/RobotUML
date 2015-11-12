@@ -4,6 +4,8 @@
 #include "EtatEnRoute.h"
 #include "EtatAVideFacePlot.h"
 
+using namespace std;
+
 #ifndef ETAT_A_VIDE_H
 #define ETAT_A_VIDE_H
 
@@ -13,13 +15,15 @@ class EtatAVide : public EtatEnRoute {
 		static EtatAVide *instance;
 
 	protected:
-		EtatAVide();
+		//EtatAVide();
 
 	public:
+		EtatAVide();
 		static EtatAVide *getInstance();
 		Etat *avancer();
 		Etat *rencontrerPlot();
 		Etat *tourner();
+		string nom();
 
 };
 #endif

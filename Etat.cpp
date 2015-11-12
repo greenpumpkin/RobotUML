@@ -1,3 +1,5 @@
+#include <string>
+#include <iostream>
 #include "Etat.h"
 #include "EtatFige.h"
 #include "EtatAVide.h"
@@ -50,6 +52,11 @@ Etat Etat::figer()
 }
 
 Etat Etat::repartir() 
+{
+	throw Action_Impossible();
+}
+
+string Etat::nom() 
 {
 	throw Action_Impossible();
 }

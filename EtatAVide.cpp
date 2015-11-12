@@ -1,7 +1,11 @@
+#include <iostream>
+#include <string>
 #include "Robot.h"
 #include "Etat.h"
 #include "EtatEnRoute.h"
 #include "EtatAVide.h"
+
+using namespace std;
 
 EtatAVide * EtatAVide::instance = new EtatAVide();
 
@@ -26,4 +30,9 @@ Etat * EtatAVide::rencontrerPlot()
 Etat * EtatAVide::tourner()
 {
 	return instance;
+}
+
+string EtatAVide::nom() 
+{
+	return "à vide";
 }

@@ -1,8 +1,12 @@
+#include <iostream>
+#include <string>
 #include "Robot.h"
 #include "Etat.h"
 #include "EtatEnRoute.h"
 #include "EtatEnCharge.h"
 #include "EtatEnChargeFacePlot.h"
+
+using namespace std;
 
 EtatEnCharge * EtatEnCharge::instance = new EtatEnCharge();
 
@@ -32,4 +36,9 @@ Etat * EtatEnCharge::rencontrerPlot()
 Etat * EtatEnCharge::peser()
 {
 	return instance;
+}
+
+string EtatEnCharge::nom() 
+{
+	return "en charge";
 }

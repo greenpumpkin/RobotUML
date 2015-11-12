@@ -1,9 +1,13 @@
+#include <iostream>
+#include <string>
 #include "Robot.h"
 #include "Etat.h"
 #include "EtatEnRoute.h"
 #include "EtatEnCharge.h"
 #include "EtatEnChargeFacePlot.h"
 #include "EtatAVideFacePlot.h"
+
+using namespace std;
 
 EtatEnChargeFacePlot * EtatEnChargeFacePlot::instance = new EtatEnChargeFacePlot();
 
@@ -33,4 +37,9 @@ Etat * EtatEnChargeFacePlot::peser()
 Etat * EtatEnChargeFacePlot::tourner()
 {
 	return EtatEnChargeFacePlot::getInstance();
+}
+
+string EtatEnChargeFacePlot::nom() 
+{
+	return "en charge face à un plot";
 }
