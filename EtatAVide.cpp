@@ -7,10 +7,7 @@
 
 using namespace std;
 
-EtatAVide * EtatAVide::instance = new EtatAVide();
-
-EtatAVide::EtatAVide()
-{}
+EtatAVide * EtatAVide::instance = new EtatAVide("À vide");
 
 EtatAVide * EtatAVide::getInstance()
 {
@@ -30,9 +27,4 @@ Etat * EtatAVide::rencontrerPlot()
 Etat * EtatAVide::tourner()
 {
 	return instance;
-}
-
-string EtatAVide::nom() 
-{
-	return "à vide";
 }

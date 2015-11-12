@@ -14,14 +14,13 @@ class EtatAVideFacePlot : public EtatEnRoute {
 		static EtatAVideFacePlot *instance;
 
 	protected:
-		EtatAVideFacePlot();
+		EtatAVideFacePlot(string nom) : EtatEnRoute(nom) {};
 
 	public:
 		static EtatAVideFacePlot *getInstance();
 		Etat *evaluerPlot();
 		Etat *saisir();
 		Etat *tourner();
-		string nom();
-
+		
 };
 #endif

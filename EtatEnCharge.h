@@ -14,15 +14,14 @@ class EtatEnCharge : public EtatEnRoute {
 		static EtatEnCharge *instance;
 
 	protected:
-		EtatEnCharge();
-
+		EtatEnCharge(string nom) : EtatEnRoute(nom) {};
+		
 	public:
 		static EtatEnCharge *getInstance();
 		Etat *avancer();
 		Etat *tourner();
 		Etat *peser();
 		Etat *rencontrerPlot();
-		string nom();
 
 };
 #endif

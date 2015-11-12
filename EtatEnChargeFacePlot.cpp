@@ -9,10 +9,7 @@
 
 using namespace std;
 
-EtatEnChargeFacePlot * EtatEnChargeFacePlot::instance = new EtatEnChargeFacePlot();
-
-EtatEnChargeFacePlot::EtatEnChargeFacePlot()
-{}
+EtatEnChargeFacePlot * EtatEnChargeFacePlot::instance = new EtatEnChargeFacePlot("En charge face plot");
 
 EtatEnChargeFacePlot * EtatEnChargeFacePlot::getInstance()
 {
@@ -37,9 +34,4 @@ Etat * EtatEnChargeFacePlot::peser()
 Etat * EtatEnChargeFacePlot::tourner()
 {
 	return EtatEnChargeFacePlot::getInstance();
-}
-
-string EtatEnChargeFacePlot::nom() 
-{
-	return "en charge face à un plot";
 }

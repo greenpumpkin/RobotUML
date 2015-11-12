@@ -9,10 +9,7 @@
 
 using namespace std;
 
-EtatAVideFacePlot * EtatAVideFacePlot::instance = new EtatAVideFacePlot();
-
-EtatAVideFacePlot::EtatAVideFacePlot()
-{}
+EtatAVideFacePlot * EtatAVideFacePlot::instance = new EtatAVideFacePlot("À vide face plot");
 
 EtatAVideFacePlot * EtatAVideFacePlot::getInstance()
 {
@@ -32,9 +29,4 @@ Etat * EtatAVideFacePlot::saisir()
 Etat * EtatAVideFacePlot::tourner()
 {
 	return EtatAVide::getInstance();
-}
-
-string EtatAVideFacePlot::nom() 
-{
-	return "vide face à un plot";
 }

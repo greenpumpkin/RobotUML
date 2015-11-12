@@ -14,14 +14,13 @@ class EtatFige : public Etat {
 		static Etat *ancienEtat;
 
 	protected:
-		EtatFige();
-	
+		EtatFige(string nom) : Etat(nom) {};
+
 	public:
 
 		//Méthode pour récupérer l'instance de la classe
 		static EtatFige *getInstance();
 		static void setEtat(Etat*); 
 		Etat *repartir();
-		string nom();
 };
 #endif

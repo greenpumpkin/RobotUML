@@ -11,52 +11,52 @@ Etat * Etat::getPremierEtat()
 	return premierEtat;
 }
 
-Etat Etat::avancer()
+Etat * Etat::avancer()
 {
 	throw Action_Impossible();
 }
 
-Etat Etat::evaluerPlot() 
+Etat * Etat::evaluerPlot() 
 { 
 	throw Action_Impossible(); 
 }
 
-Etat Etat::tourner() 
+Etat * Etat::tourner() 
 {
 	throw Action_Impossible();
 }
 
-Etat Etat::rencontrerPlot() 
+Etat * Etat::rencontrerPlot() 
 {
 	throw Action_Impossible();
 }
 
-Etat Etat::poser() 
+Etat * Etat::poser() 
 {
 	throw Action_Impossible();
 }
 
-Etat Etat::saisir() 
+Etat * Etat::saisir() 
 {
 	throw Action_Impossible();
 }
 
-Etat Etat::peser() 
+Etat * Etat::peser() 
 {
 	throw Action_Impossible();
 }
 
-Etat Etat::figer() 
+Etat * Etat::figer() 
 {
 	throw Action_Impossible();
 }
 
-Etat Etat::repartir() 
+Etat * Etat::repartir() 
 {
 	throw Action_Impossible();
 }
 
-string Etat::nom() 
+string Etat::getNom() 
 {
-	throw Action_Impossible();
+	return _nom;
 }

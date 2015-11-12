@@ -5,11 +5,8 @@
 
 using namespace std;
 
-EtatFige * EtatFige::instance = new EtatFige();
+EtatFige * EtatFige::instance = new EtatFige("Figé");
 Etat * EtatFige::ancienEtat;
-
-EtatFige::EtatFige()
-{}
 
 EtatFige * EtatFige::getInstance()
 {
@@ -24,9 +21,4 @@ void EtatFige::setEtat(Etat* nouvelEtat)
 Etat *EtatFige::repartir()
 {
 	return ancienEtat;
-}
-
-string EtatFige::nom() 
-{
-	return "figé";
 }

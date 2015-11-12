@@ -8,10 +8,7 @@
 
 using namespace std;
 
-EtatEnCharge * EtatEnCharge::instance = new EtatEnCharge();
-
-EtatEnCharge::EtatEnCharge()
-{}
+EtatEnCharge * EtatEnCharge::instance = new EtatEnCharge("En charge");
 
 EtatEnCharge * EtatEnCharge::getInstance()
 {
@@ -36,9 +33,4 @@ Etat * EtatEnCharge::rencontrerPlot()
 Etat * EtatEnCharge::peser()
 {
 	return instance;
-}
-
-string EtatEnCharge::nom() 
-{
-	return "en charge";
 }

@@ -14,7 +14,7 @@ class EtatEnChargeFacePlot : public EtatEnRoute {
 		static EtatEnChargeFacePlot *instance;
 
 	protected:
-		EtatEnChargeFacePlot();
+		EtatEnChargeFacePlot(string nom) : EtatEnRoute(nom) {};
 
 	public:
 		static EtatEnChargeFacePlot *getInstance();
@@ -22,7 +22,6 @@ class EtatEnChargeFacePlot : public EtatEnRoute {
 		Etat *peser();
 		Etat *evaluerPlot();
 		Etat *tourner();
-		string nom();
 
 };
 #endif

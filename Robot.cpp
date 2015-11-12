@@ -23,7 +23,7 @@ Robot::Robot()
 void Robot::avancer(int x, int y)
 {
     try {
-        *etat = etat->avancer();
+        etat = etat->avancer();
         _position.setX(x);
         _position.setY(y);
     }
@@ -35,7 +35,7 @@ void Robot::avancer(int x, int y)
 void Robot::tourner(string direction){
 	
     try {
-        *etat = etat->tourner();
+        etat = etat->tourner();
         _direction = direction;
     }
     catch (Etat::Action_Impossible) {
@@ -46,7 +46,7 @@ void Robot::tourner(string direction){
 void Robot::saisir(Objet o)
 {
 	try {
-        *etat = etat->saisir();
+        etat = etat->saisir();
         _objet = o;
     }
     catch (Etat::Action_Impossible) {
@@ -57,7 +57,7 @@ void Robot::saisir(Objet o)
 void Robot::poser()
 {
     try {
-       *etat = etat->poser();
+       etat = etat->poser();
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
@@ -67,7 +67,7 @@ void Robot::poser()
 int Robot::peser()
 {
     try {
-       *etat = etat->peser();
+       etat = etat->peser();
        return _objet.getPoids();
     }
     catch(Etat::Action_Impossible) {
@@ -79,7 +79,7 @@ int Robot::peser()
 void Robot::rencontrerPlot(Plot p)
 {
     try {
-       *etat = etat->rencontrerPlot();
+       etat = etat->rencontrerPlot();
        _plot = p;
     }
     catch(Etat::Action_Impossible) {
@@ -90,7 +90,7 @@ void Robot::rencontrerPlot(Plot p)
 int Robot::evaluerPlot()
 {
     try {
-       *etat = etat->evaluerPlot();
+       etat = etat->evaluerPlot();
        return _plot.getHauteur();
     }
     catch(Etat::Action_Impossible) {
@@ -102,7 +102,7 @@ int Robot::evaluerPlot()
 void Robot::figer()
 {
     try {
-       *etat = etat->figer();
+       etat = etat->figer();
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
@@ -112,22 +112,22 @@ void Robot::figer()
 void Robot::repartir()
 {
     try {
-       *etat = etat->repartir();
+       etat = etat->repartir();
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
     }
 }
 
-Etat Robot::getEtat()
+Etat * Robot::getEtat()
 {
-    return *etat;
+    return etat;
 }
 
 void Robot::afficher()
 {
-    cout << "Position: (" << _position.getX() << " ; "<< _position.getY() << ")" <<endl;
-    if (_objet.getPoids()!=0)
-        cout << "Poids de l'objet: " << _objet.getPoids() <<endl;
-    cout << "Etat du robot: " << etat->nom() <<endl;
+    cout << "Position: (" << _position.getX() << " ; "<< _position.getY() << ")" << endl;
+    if (_objet.getPoids() != 0)
+        cout << "Poids de l'objet: " << _objet.getPoids() << endl;
+    cout << "Etat du robot: " << etat->getNom() << endl;
 }

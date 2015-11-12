@@ -15,15 +15,13 @@ class EtatAVide : public EtatEnRoute {
 		static EtatAVide *instance;
 
 	protected:
-		//EtatAVide();
+		EtatAVide(string nom) : EtatEnRoute(nom) {};
 
 	public:
-		EtatAVide();
 		static EtatAVide *getInstance();
 		Etat *avancer();
 		Etat *rencontrerPlot();
 		Etat *tourner();
-		string nom();
 
 };
 #endif
