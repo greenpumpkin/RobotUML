@@ -17,7 +17,7 @@ void Observable::attacher(Observateur o){
 }
 
 void Observable::detacher(Observateur o){ //Si ne marche pas, detacher(i)
-    for (int i=0; i<_afficheurs.size(); i++){
+    for (int i=0; i<_afficheurs.size(); ++i){
         if(_afficheurs[i]==o)
             _afficheurs.erase(i);
     }

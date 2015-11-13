@@ -11,7 +11,7 @@ class Observable {
 	
 	private:
 
-		Vector<Observateur> _afficheurs
+		vector<Observateur> _afficheurs;
 
 	public: 
 		void notifier();
