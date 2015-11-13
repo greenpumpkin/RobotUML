@@ -15,7 +15,7 @@ int main()
 	Objet o(5);
 	Plot p;
 	r0->rencontrerPlot(p);
-	r0->saisir(o);
+	//r0->saisir(o);
 	r0->afficher();
 
 	cout << "___________poser-tourner-avancer:__________ " << endl;

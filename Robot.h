@@ -37,6 +37,6 @@ class Robot {
 		void figer();
 		void repartir();
 		void afficher();
-		Etat * getEtat();
+		Etat *getEtat();
 };
 #endif
