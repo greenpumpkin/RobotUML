@@ -22,6 +22,7 @@ class EtatEnCharge : public EtatEnRoute {
 		Etat *tourner();
 		Etat *peser();
 		Etat *rencontrerPlot();
+		Etat *figer();
 
 };
 #endif

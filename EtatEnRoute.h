@@ -12,7 +12,5 @@ class EtatEnRoute : public Etat {
 	protected:
 		EtatEnRoute(string nom) : Etat(nom) {};
 		
-	public:
-		Etat *figer();
 };
 #endif

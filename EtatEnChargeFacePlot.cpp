@@ -6,6 +6,7 @@
 #include "EtatEnCharge.h"
 #include "EtatEnChargeFacePlot.h"
 #include "EtatAVideFacePlot.h"
+#include "EtatFige.h"
 
 using namespace std;
 
@@ -34,4 +35,10 @@ Etat * EtatEnChargeFacePlot::peser()
 Etat * EtatEnChargeFacePlot::tourner()
 {
 	return EtatEnChargeFacePlot::getInstance();
+}
+
+Etat * EtatEnChargeFacePlot::figer()
+{
+	EtatFige::setEtat(instance);
+	return EtatFige::getInstance();
 }

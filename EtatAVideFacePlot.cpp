@@ -6,6 +6,7 @@
 #include "EtatAVide.h"
 #include "EtatAVideFacePlot.h"
 #include "EtatEnChargeFacePlot.h"
+#include "EtatFige.h"
 
 using namespace std;
 
@@ -29,4 +30,10 @@ Etat * EtatAVideFacePlot::saisir()
 Etat * EtatAVideFacePlot::tourner()
 {
 	return EtatAVide::getInstance();
+}
+
+Etat * EtatAVideFacePlot::figer()
+{
+	EtatFige::setEtat(instance);
+	return EtatFige::getInstance();
 }

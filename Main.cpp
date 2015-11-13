@@ -18,6 +18,12 @@ int main()
 	r0->saisir(o);
 	r0->afficher();
 
+	r0->figer();
+	r0->afficher();
+
+	r0->repartir();
+	r0->afficher();
+
     return 0;
 }
 

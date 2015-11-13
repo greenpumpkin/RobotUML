@@ -4,6 +4,7 @@
 #include "Etat.h"
 #include "EtatEnRoute.h"
 #include "EtatAVide.h"
+#include "EtatFige.h"
 
 using namespace std;
 
@@ -27,4 +28,10 @@ Etat * EtatAVide::tourner()
 Etat * EtatAVide::rencontrerPlot()
 {
 	return EtatAVideFacePlot::getInstance();
+}
+
+Etat * EtatAVide::figer()
+{
+	EtatFige::setEtat(instance);
+	return EtatFige::getInstance();
 }

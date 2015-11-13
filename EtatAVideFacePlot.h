@@ -21,6 +21,7 @@ class EtatAVideFacePlot : public EtatEnRoute {
 		Etat *evaluerPlot();
 		Etat *saisir();
 		Etat *tourner();
+		Etat *figer();
 		
 };
 #endif

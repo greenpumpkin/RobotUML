@@ -5,6 +5,7 @@
 #include "EtatEnRoute.h"
 #include "EtatEnCharge.h"
 #include "EtatEnChargeFacePlot.h"
+#include "EtatFige.h"
 
 using namespace std;
 
@@ -33,4 +34,10 @@ Etat * EtatEnCharge::rencontrerPlot()
 Etat * EtatEnCharge::peser()
 {
 	return instance;
+}
+
+Etat * EtatEnCharge::figer()
+{
+	EtatFige::setEtat(instance);
+	return EtatFige::getInstance();
 }

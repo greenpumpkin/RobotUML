@@ -22,6 +22,7 @@ class EtatAVide : public EtatEnRoute {
 		Etat *avancer();
 		Etat *rencontrerPlot();
 		Etat *tourner();
+		Etat *figer();
 
 };
 #endif

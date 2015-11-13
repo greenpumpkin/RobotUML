@@ -22,6 +22,7 @@ class EtatEnChargeFacePlot : public EtatEnRoute {
 		Etat *peser();
 		Etat *evaluerPlot();
 		Etat *tourner();
+		Etat *figer();
 
 };
 #endif
