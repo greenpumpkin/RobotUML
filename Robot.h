@@ -7,6 +7,8 @@
 #include "Plot.h"
 #include "Position.h"
 
+using namespace std;
+
 #ifndef ROBOT_H
 #define ROBOT_H
 
@@ -36,7 +38,10 @@ class Robot {
 		int evaluerPlot();
 		void figer();
 		void repartir();
-		void afficher();
 		Etat *getEtat();
+		Objet getObjet();
+		string getDirection();
+		Position getPosition();
+		Plot getPlot();
 };
 #endif

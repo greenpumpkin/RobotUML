@@ -17,6 +17,6 @@ class Observable {
 	public: 
 		void notifier();
 		void attacher(Observateur o);
-		void detacher(Observateur o);
+		void detacher(int i);
 };
 #endif

@@ -6,6 +6,8 @@
 #include "Robot.h"
 #include "EtatAVide.h"
 
+using namespace std;
+
 Robot::Robot(int x, int y)
 {
     etat = Etat::getPremierEtat();
@@ -124,10 +126,18 @@ Etat * Robot::getEtat()
     return etat;
 }
 
-void Robot::afficher()
-{
-    cout << "Position: (" << _position.getX() << " ; "<< _position.getY() << ")" << endl;
-    if (_objet.getPoids() != 0)
-        cout << "Poids de l'objet: " << _objet.getPoids() << endl;
-    cout << "Etat du robot: " << etat->getNom() << endl;
+Objet Robot::getObjet(){
+    return _objet;
+}
+
+string Robot::getDirection(){
+    return _direction;
+}
+
+Position Robot::getPosition(){
+    return _position;
+}
+
+Plot Robot::getPlot(){
+    return _plot;
 }
