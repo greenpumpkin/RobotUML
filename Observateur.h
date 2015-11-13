@@ -9,7 +9,7 @@
 class Observateur {
 
 	public:
-		virtual void afficher(){};
+		virtual void afficher();
 
 };
 #endif

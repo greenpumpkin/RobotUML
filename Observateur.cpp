@@ -6,5 +6,5 @@
 #include "Observable.h"
 #include "Observateur.h"
 
-void afficher() 
+void Observateur::afficher() 
 {}

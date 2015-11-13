@@ -11,12 +11,12 @@ using namespace std;
 
 class Observable {
 	
-	private:
-		vector<Observateur> _afficheurs;
+	protected:
+		vector<Observateur *> _afficheurs;
 
 	public: 
 		void notifier();
-		void attacher(Observateur o);
-		void detacher(int i);
+		void attacher(Observateur *o);
+		void detacher(Observateur *o);
 };
 #endif

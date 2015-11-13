@@ -43,5 +43,6 @@ class Robot {
 		string getDirection();
 		Position getPosition();
 		Plot getPlot();
+		void notifier();
 };
 #endif
