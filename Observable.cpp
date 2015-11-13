@@ -12,8 +12,8 @@ void Observable::notifier(){
     //for(Observateur o : _afficheurs)
     //    o.afficher();
     for (unsigned i=0; i<_afficheurs.size(); ++i)
-    	//_afficheurs[i].afficher();
-    	cout << "affichage" << endl;
+    	_afficheurs[i].afficher();
+    	//cout << "affichage" << endl;
 }
 
 void Observable::attacher(Observateur o){
