@@ -11,9 +11,9 @@
 using namespace std;
 
 void AfficheurConsole::afficher(){
-    cout << "Position: (" << robot->getPosition().getX() << " ; "<< robot->getPosition().getY() << ")" << endl;
-    cout << "Direction: " << robot->getDirection() << endl;
-    if (robot->getObjet().getPoids() != 0)
-        cout << "Poids de l'objet: " << robot->getObjet().getPoids() << endl;
-    cout << "Etat du robot: " << robot->getEtat()->getNom() << endl;
+    cout << "Position: (" << _robot->getPosition().getX() << " ; "<< _robot->getPosition().getY() << ")" << endl;
+    cout << "Direction: " << _robot->getDirection() << endl;
+    if (_robot->getObjet().getPoids() != 0)
+        cout << "Poids de l'objet: " << _robot->getObjet().getPoids() << endl;
+    cout << "Etat du robot: " << _robot->getEtat()->getNom() << endl;
 }

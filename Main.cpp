@@ -27,7 +27,7 @@ int main()
 
 	cout << "___________poser-tourner-avancer:__________ " << endl;
 	r0->poser();
-	r0->tourner("NORTH");
+	r0->tourner("N");
 	r0->avancer(1,1);
 	r0->notifier();
 	//r0->afficher();

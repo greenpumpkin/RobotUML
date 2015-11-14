@@ -11,10 +11,10 @@ using namespace std;
 class AfficheurConsole : public Observateur {
 
 	private:
-		Robot *robot;
+		Robot *_robot;
 		
 	public:
-		AfficheurConsole(Robot *r): robot(r){}
+		AfficheurConsole(Robot *r): _robot(r) {}
 
 		void afficher();
 
