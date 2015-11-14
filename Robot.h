@@ -6,13 +6,14 @@
 #include "Etat.h"
 #include "Plot.h"
 #include "Position.h"
+#include "Observable.h"
 
 using namespace std;
 
 #ifndef ROBOT_H
 #define ROBOT_H
 
-class Robot {
+class Robot : public Observable {
 	
 	private:
 
@@ -43,6 +44,5 @@ class Robot {
 		string getDirection();
 		Position getPosition();
 		Plot getPlot();
-		void notifier();
 };
 #endif

@@ -4,7 +4,7 @@
 #include <cctype>
 #include <vector>
 #include "Robot.h"
-#include "Observable.h"
+#include "EtatAVide.h"
 
 using namespace std;
 
@@ -126,22 +126,18 @@ Etat * Robot::getEtat()
     return etat;
 }
 
-Objet Robot::getObjet()
-{
+Objet Robot::getObjet(){
     return _objet;
 }
 
-string Robot::getDirection()
-{
+string Robot::getDirection(){
     return _direction;
 }
 
-Position Robot::getPosition()
-{
+Position Robot::getPosition(){
     return _position;
 }
 
-Plot Robot::getPlot()
-{
+Plot Robot::getPlot(){
     return _plot;
 }

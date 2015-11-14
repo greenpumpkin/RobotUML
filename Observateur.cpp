@@ -1,10 +1,14 @@
 #include <iostream>
-#include <time.h>
 #include <string>
 #include <cctype>
 #include <vector>
-#include "Observable.h"
 #include "Observateur.h"
+#include "Objet.h"
+#include "Etat.h"
+#include "Plot.h"
 
-void Observateur::afficher() 
-{}
+using namespace std;
+
+void Observateur::afficher(){
+	cout << "dans Observateur" << endl;
+}

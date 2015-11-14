@@ -8,30 +8,40 @@ using namespace std;
 
 int main()
 {
+	Robot r0(3, 4);
+	AfficheurConsole a(r0);
+	Observateur * obs=&a;
+	r0.attacher(obs);
+
 	cout << "___________Etat initial:__________ " << endl;
-	Observable *r0 = new Robot(3, 4);
+	r0.notifier();
 	//r0->afficher();
 
 	cout << "___________rencontrer plot-saisir:__________ " << endl;
 	Objet o(5);
 	Plot p;
-	r0->rencontrerPlot(p);
-	//r0->saisir(o);
+	r0.rencontrerPlot(p);
+	r0.saisir(o);
+	r0.notifier();
 	//r0->afficher();
 
 	cout << "___________poser-tourner-avancer:__________ " << endl;
-	r0->poser();
-	r0->tourner("NORTH");
-	r0->avancer(1,1);
+	r0.poser();
+	r0.tourner("NORTH");
+	r0.avancer(1,1);
+	r0.notifier();
 	//r0->afficher();
 
-	r0->figer();
+	cout << "___________figer:__________ " << endl;
+	r0.figer();
+	r0.notifier();
 	//r0->afficher();
 
-	r0->repartir();
+	cout << "___________repartir:__________ " << endl;
+	r0.repartir();
+	r0.notifier();
 	//r0->afficher();
 
-	Observable obs= new AfficheurConsole(r0);
 
 
     return 0;
