@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Observateur.h"
+#include "Observable.h"
 
 using namespace std;
 
@@ -10,9 +11,11 @@ using namespace std;
 class AfficheurConsole : public Observateur {
 
 	private:
-		Robot _robot;
+		Observable _obs;
 		
 	public:
+		AfficheurConsole(Observable r): _obs(r){}
+
 		void afficher();
 
 };

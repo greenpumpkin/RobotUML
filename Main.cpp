@@ -1,6 +1,7 @@
 #include "Robot.h"
 #include "Etat.h"
 #include "EtatFige.h"
+#include "AfficheurConsole.h"
 #include <iostream>
 
 using namespace std;
@@ -8,7 +9,7 @@ using namespace std;
 int main()
 {
 	cout << "___________Etat initial:__________ " << endl;
-	Robot * r0 = new Robot(3, 4);
+	Observable *r0 = new Robot(3, 4);
 	//r0->afficher();
 
 	cout << "___________rencontrer plot-saisir:__________ " << endl;
@@ -29,6 +30,9 @@ int main()
 
 	r0->repartir();
 	//r0->afficher();
+
+	Observable obs= new AfficheurConsole(r0);
+
 
     return 0;
 }
