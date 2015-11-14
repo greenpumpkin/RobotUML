@@ -15,12 +15,16 @@ void AfficheurConsole::afficher(){
 	cout << "Etat du robot après exécution de l'ordre donné: " << _robot->getEtat()->getNom() << endl;
     cout << "Position: (" << _robot->getPosition().getX() << " ; "<< _robot->getPosition().getY() << ")" << endl;
     cout << "Direction: " << _robot->getDirection() << endl;
-    cout << "Objet (vide si pas d'objet): " << endl;
+    
     if (_robot->getObjet().getPoids() != 0)
-        cout << "Poids de l'objet: " << _robot->getObjet().getPoids() << endl;
-    cout << "Plot  (vide si pas en face d'un plot): " << endl;
+        cout << "Le robot tient un objet de poids  " << _robot->getObjet().getPoids() << endl;
+    else
+        cout << "Le robot ne tient pas d'objet." << endl;
+
     if (_robot->getPlot().getHauteur() != 0)
-    	cout << "Hauteur du plot: " << _robot->getPlot().getHauteur() << endl;
+    	cout << "Le robot est en face d'un plot de hauteur " << _robot->getPlot().getHauteur() << endl;
+    else
+        cout << "Le robot n'est pas en face d'un plot." << endl;
 
     if (_robot->getOrdre() == "figer")
     	cout << "Le robot est figé." << endl;
