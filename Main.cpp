@@ -13,11 +13,12 @@ int main()
 	Observateur * obs=&a;
 	r0->attacher(obs);
 
-	cout << "___________Etat initial:__________ " << endl;
+	cout << "_____________________\n" << endl;
 	r0->notifier();
 	//r0->afficher();
 
-	cout << "___________rencontrer plot-saisir:__________ " << endl;
+
+	cout << "_____________________\n" << endl;
 	Objet o(5);
 	Plot p;
 	r0->rencontrerPlot(p);
@@ -25,14 +26,14 @@ int main()
 	r0->notifier();
 	//r0->afficher();
 
-	cout << "___________poser-tourner-avancer:__________ " << endl;
+	cout << "_____________________\n" << endl;
 	r0->poser();
 	r0->tourner("N");
 	r0->avancer(1,1);
 	r0->notifier();
 	//r0->afficher();
 
-	cout << "___________recontrer plot-saisir-peser:__________ " << endl;
+	cout << "_____________________\n" << endl;
 	Objet o2(2);
 	r0->rencontrerPlot(p);
 	r0->saisir(o2);
@@ -40,15 +41,19 @@ int main()
 	r0->notifier();
 	//r0->afficher();
 
-	cout << "___________figer:__________ " << endl;
+	cout << "_____________________\n" << endl;
 	r0->figer();
 	r0->notifier();
 	//r0->afficher();
 
-	cout << "___________repartir:__________ " << endl;
+	cout << "_____________________\n" << endl;
 	r0->repartir();
 	r0->notifier();
 	//r0->afficher();
+
+	cout << "_____________________\n" << endl;
+	r0->tourner("E");
+	r0->notifier();
 
 
 

@@ -22,6 +22,7 @@ class Robot : public Observable {
 		Objet _objet;
 		Position _position;
 		Plot _plot;
+		string _ordre;
 		
 
 	public: 
@@ -44,5 +45,6 @@ class Robot : public Observable {
 		string getDirection();
 		Position getPosition();
 		Plot getPlot();
+		string getOrdre();
 };
 #endif

@@ -13,6 +13,8 @@ Robot::Robot(int x, int y)
     etat = Etat::getPremierEtat();
     _position.setX(x);
     _position.setY(y);
+    _direction = "N";
+    _ordre = "Aucun ordre n'a encore été donné (état initial)";
 }
 
 Robot::Robot()
@@ -20,6 +22,8 @@ Robot::Robot()
     etat = Etat::getPremierEtat();
     _position.setX(0);
     _position.setY(0);
+    _direction = "N";
+    _ordre = "Aucun ordre n'a encore été donné (état initial)";
 }
 
 void Robot::avancer(int x, int y)
@@ -28,6 +32,7 @@ void Robot::avancer(int x, int y)
         etat = etat->avancer();
         _position.setX(x);
         _position.setY(y);
+        _ordre = "avancer";
     }
     catch (Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
@@ -39,6 +44,7 @@ void Robot::tourner(string direction){
     try {
         etat = etat->tourner();
         _direction = direction;
+        _ordre = "tourner";
     }
     catch (Etat::Action_Impossible) {
     	cerr << "Action impossible vu l'état." << endl;
@@ -50,6 +56,7 @@ void Robot::saisir(Objet o)
 	try {
         etat = etat->saisir();
         _objet = o;
+        _ordre = "saisir";
     }
     catch (Etat::Action_Impossible) {
     	cerr << "Action impossible vu l'état." << endl;
@@ -60,6 +67,7 @@ void Robot::poser()
 {
     try {
        etat = etat->poser();
+       _ordre = "poser";
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
@@ -70,6 +78,7 @@ int Robot::peser()
 {
     try {
        etat = etat->peser();
+       _ordre = "peser";
        return _objet.getPoids();
     }
     catch(Etat::Action_Impossible) {
@@ -83,6 +92,7 @@ void Robot::rencontrerPlot(Plot p)
     try {
        etat = etat->rencontrerPlot();
        _plot = p;
+       _ordre = "rencontrer plot";
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
@@ -93,6 +103,7 @@ int Robot::evaluerPlot()
 {
     try {
        etat = etat->evaluerPlot();
+       _ordre = "évaluer plot";
        return _plot.getHauteur();
     }
     catch(Etat::Action_Impossible) {
@@ -105,6 +116,7 @@ void Robot::figer()
 {
     try {
        etat = etat->figer();
+       _ordre = "figer";
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
@@ -115,6 +127,7 @@ void Robot::repartir()
 {
     try {
        etat = etat->repartir();
+       _ordre = "repartir";
     }
     catch(Etat::Action_Impossible) {
         cerr << "Action impossible vu l'état." << endl;
@@ -144,4 +157,9 @@ Position Robot::getPosition()
 Plot Robot::getPlot()
 {
     return _plot;
+}
+
+string Robot::getOrdre()
+{
+    return _ordre;
 }
