@@ -46,5 +46,6 @@ class Robot : public Observable {
 		Position getPosition();
 		Plot getPlot();
 		string getOrdre();
+		void notifier();
 };
 #endif

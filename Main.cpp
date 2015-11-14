@@ -15,60 +15,43 @@ int main()
 
 	cout << "_____________________\n" << endl;
 	r0->notifier();
-	//r0->afficher();
-
 
 	cout << "_____________________\n" << endl;
 	Objet o(5);
-	Plot p;
+	Plot p(7);
 	r0->rencontrerPlot(p);
-	r0->notifier();
-
-	cout << "_____________________\n" << endl;
-	r0->saisir(o);
-	r0->notifier();
-	//r0->afficher();
 	
 	cout << "_____________________\n" << endl;
-	r0->poser();
-	r0->notifier();
+	r0->saisir(o);
 
 	cout << "_____________________\n" << endl;
-	r0->tourner("N");
-	r0->notifier();
+	r0->poser();
+
+	cout << "_____________________\n" << endl;
+	r0->tourner("S");
 
 	cout << "_____________________\n" << endl;
 	r0->avancer(1,1);
-	r0->notifier();
-	//r0->afficher();
 
 	cout << "_____________________\n" << endl;
 	Objet o2(2);
-	r0->rencontrerPlot(p);
-	r0->notifier();
+	Plot p1(4);
+	r0->rencontrerPlot(p1);
 
 	cout << "_____________________\n" << endl;
 	r0->saisir(o2);
-	r0->notifier();
 	
 	cout << "_____________________\n" << endl;
 	r0->peser();
-	r0->notifier();
-	//r0->afficher();
 
 	cout << "_____________________\n" << endl;
 	r0->figer();
-	r0->notifier();
-	//r0->afficher();
 
 	cout << "_____________________\n" << endl;
 	r0->repartir();
-	r0->notifier();
-	//r0->afficher();
 
 	cout << "_____________________\n" << endl;
 	r0->tourner("E");
-	r0->notifier();
 
 
 

@@ -8,12 +8,6 @@
 
 using namespace std;
 
-void Observable::notifier()
-{
-    for (vector<Observateur *>::iterator i = _afficheurs.begin(); i!= _afficheurs.end(); ++i)
-        (*i)->afficher();
-}
-
 void Observable::attacher(Observateur *o){
     _afficheurs.push_back(o);
 }

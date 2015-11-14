@@ -10,6 +10,7 @@ class Plot {
 		int hauteur;
 
 	public:
+		Plot(int haut = 0) : hauteur(haut) {}
 		int getHauteur() 
 		{
 			return hauteur;
