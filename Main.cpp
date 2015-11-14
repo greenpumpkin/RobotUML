@@ -8,13 +8,8 @@ using namespace std;
 
 int main()
 {
-	Robot r0(3, 4);
-	AfficheurConsole a(r0);
-	Observateur * obs=&a;
-	r0.attacher(obs);
-
 	cout << "___________Etat initial:__________ " << endl;
-	r0.notifier();
+	Robot r0(3, 4);
 	//r0->afficher();
 
 	cout << "___________rencontrer plot-saisir:__________ " << endl;
@@ -22,26 +17,25 @@ int main()
 	Plot p;
 	r0.rencontrerPlot(p);
 	r0.saisir(o);
-	r0.notifier();
 	//r0->afficher();
 
 	cout << "___________poser-tourner-avancer:__________ " << endl;
 	r0.poser();
 	r0.tourner("NORTH");
 	r0.avancer(1,1);
-	r0.notifier();
 	//r0->afficher();
 
-	cout << "___________figer:__________ " << endl;
 	r0.figer();
-	r0.notifier();
 	//r0->afficher();
 
-	cout << "___________repartir:__________ " << endl;
 	r0.repartir();
-	r0.notifier();
 	//r0->afficher();
 
+	AfficheurConsole a(r0);
+	Observateur * obs=&a;
+	cout << "affichage:" <<endl;
+	r0.attacher(obs);
+	r0.notifier();
 
 
     return 0;
