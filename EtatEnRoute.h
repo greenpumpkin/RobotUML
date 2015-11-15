@@ -1,6 +1,6 @@
 /*!
 * 
-* Fichier EtatEnRoute.cpp
+* Fichier EtatEnRoute.h
 * Auteurs : Chloé Guglielmi et Cindy Najjar
 *
 */
