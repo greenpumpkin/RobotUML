@@ -1,3 +1,10 @@
+/*!
+* 
+* Classe EtatEnCharge.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include "Etat.h"
@@ -14,6 +21,7 @@ class EtatEnCharge : public EtatEnRoute {
 		static EtatEnCharge *instance;
 
 	protected:
+		//Constructeur
 		EtatEnCharge(string nom) : EtatEnRoute(nom) {};
 		
 	public:

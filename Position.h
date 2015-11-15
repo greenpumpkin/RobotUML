@@ -1,3 +1,11 @@
+/*!
+* 
+* Classe Position.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
+
 #include <iostream>
 #include <string>
 
@@ -11,6 +19,7 @@ class Position {
 		int y;
 
 	public:
+		//Accesseurs
 		int getX();
 		int getY();
 		void setX(int x);

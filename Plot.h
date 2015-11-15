@@ -1,3 +1,11 @@
+/*!
+* 
+* Classe Plot.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
+
 #include <iostream>
 #include <string>
 
@@ -10,7 +18,10 @@ class Plot {
 		int hauteur;
 
 	public:
+		//Constructeur
 		Plot(int haut = 0) : hauteur(haut) {}
+
+		//Accesseur
 		int getHauteur() 
 		{
 			return hauteur;

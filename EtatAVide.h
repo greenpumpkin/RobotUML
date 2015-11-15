@@ -1,3 +1,10 @@
+/*!
+* 
+* Classe EtatAVide.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include "Etat.h"
@@ -15,6 +22,7 @@ class EtatAVide : public EtatEnRoute {
 		static EtatAVide *instance;
 
 	protected:
+		//Constructeur
 		EtatAVide(string nom) : EtatEnRoute(nom) {};
 
 	public:

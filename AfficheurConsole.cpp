@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier AfficheurConsole.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <time.h>
 #include <string>
@@ -10,6 +17,7 @@
 
 using namespace std;
 
+/* Méthode permettant d'afficher la trace du robot */
 void AfficheurConsole::afficher(){
 	cout << "Ordre donné au robot: " << _robot->getOrdre() << endl;
 	cout << "Etat du robot après exécution de l'ordre donné: " << _robot->getEtat()->getNom() << endl;

@@ -1,3 +1,10 @@
+/*!
+* 
+* Classe EtatAVideFacePlot.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include "Etat.h"

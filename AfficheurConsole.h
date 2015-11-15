@@ -1,3 +1,10 @@
+/*!
+* 
+* Classe AfficheurConsole.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include "Observateur.h"
@@ -14,6 +21,7 @@ class AfficheurConsole : public Observateur {
 		Robot *_robot;
 		
 	public:
+		//Constructeur
 		AfficheurConsole(Robot *r): _robot(r) {}
 
 		void afficher();

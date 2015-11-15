@@ -1,3 +1,10 @@
+/*!
+* 
+* Classe Etat.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include "Plot.h"
@@ -21,7 +28,7 @@ class Etat {
 		//Exception
 		class Action_Impossible {};
 
-		static Etat *getPremierEtat();
+		//Méthodes
 		virtual Etat *avancer();
 		virtual Etat *evaluerPlot();
 		virtual Etat *tourner();
@@ -31,6 +38,9 @@ class Etat {
 		virtual Etat *peser();
 		virtual Etat *figer();
 		virtual Etat *repartir();
+
+		//Accesseurs
+		static Etat *getPremierEtat();
 		string getNom();
 
 };

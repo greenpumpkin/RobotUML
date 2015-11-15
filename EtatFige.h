@@ -1,3 +1,10 @@
+/*!
+* 
+* Classe EtatFige.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include "Etat.h"
@@ -14,11 +21,10 @@ class EtatFige : public Etat {
 		static Etat *ancienEtat;
 
 	protected:
+		//Constructeur
 		EtatFige(string nom) : Etat(nom) {};
 
 	public:
-
-		//Méthode pour récupérer l'instance de la classe
 		static EtatFige *getInstance();
 		static void setEtat(Etat*); 
 		Etat *repartir();

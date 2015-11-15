@@ -1,3 +1,10 @@
+/*!
+* Fichier Robot.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
+
 #include <iostream>
 #include <time.h>
 #include <string>
@@ -8,6 +15,8 @@
 #include "Observable.h"
 
 using namespace std;
+
+/* Constructeurs */
 
 Robot::Robot(int x, int y)
 {
@@ -27,12 +36,15 @@ Robot::Robot()
     _ordre = "Aucun ordre n'a encore été donné (état initial)";
 }
 
+/* Méthode permettant de faire une mise à jour en avertissant les observateurs */
 void Robot::notifier()
 {
     for (vector<Observateur *>::iterator i = _afficheurs.begin(); i!= _afficheurs.end(); ++i)
         (*i)->afficher();
 }
 
+
+/* Méthode permettant au robot d'avancer à la position (x,y) */
 void Robot::avancer(int x, int y)
 {
     try {
@@ -47,12 +59,16 @@ void Robot::avancer(int x, int y)
     }
 }
 
+/* Méthode permettant au robot de tourner dans la direction N,S,E ou O */
 void Robot::tourner(string direction){
 	
     try {
+      if (direction != _direction)
+      {
         etat = etat->tourner();
         _direction = direction;
         _plot = Plot(0);
+      }
         _ordre = "tourner";
         notifier();
     }
@@ -61,6 +77,7 @@ void Robot::tourner(string direction){
     }
 }
 
+/* Méthode permettant au robot de saisir l'objet o */
 void Robot::saisir(Objet o)
 {
 	try {
@@ -74,6 +91,7 @@ void Robot::saisir(Objet o)
     }
 }
 
+/* Méthode permettant au robot de poser un objet */
 void Robot::poser()
 {
     try {
@@ -87,6 +105,8 @@ void Robot::poser()
     }
 }
 
+/* Méthode permettant au robot de peser un objet. 
+ * Le poids de cet objet est retourné */
 int Robot::peser()
 {
     try {
@@ -101,6 +121,7 @@ int Robot::peser()
     return -1;
 }
 
+/* Méthode permettant au robot de rencontrer un plot p */
 void Robot::rencontrerPlot(Plot p)
 {
     try {
@@ -114,6 +135,8 @@ void Robot::rencontrerPlot(Plot p)
     }
 }
 
+/* Méthode permettant au robot d'évaluer un plot.
+ * La hauteur du plot est retournée. */
 int Robot::evaluerPlot()
 {
     try {
@@ -128,6 +151,7 @@ int Robot::evaluerPlot()
     return -1;
 }
 
+/* Méthode permettant de figer le robot */
 void Robot::figer()
 {
     try {
@@ -140,6 +164,7 @@ void Robot::figer()
     }
 }
 
+/* Méthode permettant au robot de repasser à l'état enRoute */
 void Robot::repartir()
 {
     try {
@@ -151,6 +176,8 @@ void Robot::repartir()
         cerr << "Action impossible vu l'état." << endl;
     }
 }
+
+/* Accesseurs */
 
 Etat * Robot::getEtat()
 {

@@ -1,4 +1,14 @@
+/*!
+* 
+* Fichier Position.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
+
 #include "Position.h"
+
+/* Accesseurs */
 
 int Position::getX() 
 {
@@ -9,6 +19,8 @@ int Position::getY()
 {
 	return y;
 }
+
+/* Modificateurs */
 
 void Position::setX(int hor)
 {

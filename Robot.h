@@ -1,3 +1,10 @@
+/*!
+* 
+* Classe Robot.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include <cctype>
@@ -16,7 +23,6 @@ using namespace std;
 class Robot : public Observable {
 	
 	private:
-
 		Etat *etat;
 		string _direction;
 		Objet _objet;
@@ -26,6 +32,7 @@ class Robot : public Observable {
 		
 
 	public: 
+		
 		//Constructeurs
 		Robot();
 		Robot(int x, int y);
@@ -40,12 +47,15 @@ class Robot : public Observable {
 		int evaluerPlot();
 		void figer();
 		void repartir();
+		void notifier();
+
+		//Accesseurs
 		Etat *getEtat();
 		Objet getObjet();
 		string getDirection();
 		Position getPosition();
 		Plot getPlot();
 		string getOrdre();
-		void notifier();
+		
 };
 #endif

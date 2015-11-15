@@ -1,3 +1,11 @@
+/*!
+* 
+* Fichier Main.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
+
 #include "Robot.h"
 #include "Etat.h"
 #include "EtatFige.h"

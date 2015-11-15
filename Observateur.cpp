@@ -1,3 +1,11 @@
+/*!
+* 
+* Fichier Observateur.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
+
 #include <iostream>
 #include <string>
 #include <cctype>
@@ -9,6 +17,7 @@
 
 using namespace std;
 
+/* Méthode afficher de Observateur */
 void Observateur::afficher(){
 	cout << "dans Observateur" << endl;
 }

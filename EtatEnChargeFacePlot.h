@@ -1,3 +1,10 @@
+/*!
+* 
+* Classe EtatEnChargeFacePlot.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include "Etat.h"
@@ -14,6 +21,7 @@ class EtatEnChargeFacePlot : public EtatEnRoute {
 		static EtatEnChargeFacePlot *instance;
 
 	protected:
+		//Constructeur
 		EtatEnChargeFacePlot(string nom) : EtatEnRoute(nom) {};
 
 	public:

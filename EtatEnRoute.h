@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier EtatEnRoute.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include "Etat.h"
@@ -10,6 +17,7 @@ using namespace std;
 class EtatEnRoute : public Etat {
 
 	protected:
+		//Constructeur
 		EtatEnRoute(string nom) : Etat(nom) {};
 		
 };

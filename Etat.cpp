@@ -1,15 +1,18 @@
+/*!
+* 
+* Fichier Etat.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <string>
 #include <iostream>
 #include "Etat.h"
 #include "EtatFige.h"
 #include "EtatAVide.h"
 
+//Initialisation du premier état du robot
 Etat * Etat::premierEtat = EtatAVide::getInstance();
-
-Etat * Etat::getPremierEtat()
-{
-	return premierEtat;
-}
 
 Etat * Etat::avancer()
 {
@@ -54,6 +57,14 @@ Etat * Etat::figer()
 Etat * Etat::repartir() 
 {
 	throw Action_Impossible();
+}
+
+
+/* Accesseurs */
+
+Etat * Etat::getPremierEtat()
+{
+	return premierEtat;
 }
 
 string Etat::getNom() 
