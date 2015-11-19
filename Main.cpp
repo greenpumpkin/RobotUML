@@ -10,6 +10,7 @@
 #include "Etat.h"
 #include "EtatFige.h"
 #include "AfficheurConsole.h"
+#include "LecteurCommandes.h"
 #include <iostream>
 
 using namespace std;
@@ -24,7 +25,19 @@ int main()
 	cout << "_____________________\n" << endl;
 	r0->notifier();
 
-	cout << "_____________________\n" << endl;
+	LecteurCommandes(lect);
+	lect.execFichier();
+
+	/*
+	filebuf fb;
+	if (fb.open (fichier,ios::in))
+    	istream fichierEntree=&fb;
+
+    ... Puis fb.close quand on a fini
+    */
+
+
+	/*cout << "_____________________\n" << endl;
 	Objet o(5);
 	Plot p(7);
 	r0->rencontrerPlot(p);
@@ -60,8 +73,7 @@ int main()
 
 	cout << "_____________________\n" << endl;
 	r0->tourner("E");
-
-
+	*/
 
     return 0;
 }
