@@ -25,17 +25,17 @@ int main()
 	cout << "_____________________\n" << endl;
 	r0->notifier();
 
+	//Si commandes sur l'entrée standard
 	LecteurCommandes(lect);
 	lect.execFichier();
 
-	/*
-	filebuf fb;
-	if (fb.open (fichier,ios::in))
-    	istream fichierEntree=&fb;
-
-    ... Puis fb.close quand on a fini
-    */
-
+	//Si commandes dans un fichier texte:
+	/*ifstream fichier("test.txt", ios::in);  
+	if(fichier) { 
+		LecteurCommandes lect(fichier);
+		lect.execFichier();
+	}
+	fichier.close();*/
 
 	/*cout << "_____________________\n" << endl;
 	Objet o(5);
