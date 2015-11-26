@@ -1,6 +1,7 @@
 #include <iostream>     
 #include <fstream>
 #include <string>
+#include "Robot.h"
 
 using namespace std;
 
@@ -10,10 +11,11 @@ using namespace std;
 class LecteurCommandes {
 	private:
 		istream& fichierEntree;
+		Robot *robot;
 		//Pile des commandes exécutées pour le 3.6
 	public:
-		LecteurCommandes(istream& is) : fichierEntree(is){}
-		LecteurCommandes() : fichierEntree(cin){}
+		LecteurCommandes(istream& is, Robot *r) : fichierEntree(is), robot(r){}
+		LecteurCommandes(Robot *r) : fichierEntree(cin), robot(r){}
 
 		void execFichier();
 };
