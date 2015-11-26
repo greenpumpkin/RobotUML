@@ -12,8 +12,6 @@ using namespace std;
 class Commande {
 	private:
 		bool reversible;
-	protected:
-		Robot *recepteur;
 	public:
 		static map<string, Commande*>& commandesPossibles();
 		Commande(string c);
@@ -22,7 +20,7 @@ class Commande {
 		virtual Commande* constructeurVirtuel()=0;
 		virtual void execute()=0;
 		virtual void desexecute()=0;
-		void setRobot(Robot *r){recepteur=r;}
+		virtual void setRobot(Robot *r)=0;
 };
 
 #endif
