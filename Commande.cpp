@@ -17,7 +17,6 @@ map<string, Commande*>& Commande::commandesPossibles(){
 
 Commande* Commande::nouvelleCommande(string c){
 	return commandesPossibles()[c]->constructeurVirtuel();
-	cout<<"nvl com"<<endl;
 }
 
 

@@ -4,21 +4,21 @@
 #include <map>
 #include "Commande.h"
 #include "CommandeRobot.h"
-#include "Avancer.h"
+#include "Tourner.h"
 #include "Robot.h"
 
 using namespace std;
 
-Avancer * Avancer::instance = new Avancer();
+Tourner * Tourner::instance = new Tourner();
 
-Commande* Avancer::constructeurVirtuel(){
-	return new Avancer();
+Commande* Tourner::constructeurVirtuel(){
+	return new Tourner();
 }
 
-void Avancer::execute(){
-	recepteur->avancer(2,2);
+void Tourner::execute(){
+	recepteur->tourner("S");
 }
 
-void Avancer::desexecute(){
+void Tourner::desexecute(){
 	cout<<"non implémenté"<<endl;
 }

@@ -18,6 +18,8 @@ class LecteurCommandes {
 		LecteurCommandes(Robot *r) : fichierEntree(cin), robot(r){}
 
 		void execFichier();
+
+		Robot *getRobot(){return robot;}
 };
 
 #endif

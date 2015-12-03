@@ -4,21 +4,21 @@
 #include <map>
 #include "Commande.h"
 #include "CommandeRobot.h"
-#include "Avancer.h"
+#include "Peser.h"
 #include "Robot.h"
 
 using namespace std;
 
-Avancer * Avancer::instance = new Avancer();
+Peser * Peser::instance = new Peser();
 
-Commande* Avancer::constructeurVirtuel(){
-	return new Avancer();
+Commande* Peser::constructeurVirtuel(){
+	return new Peser();
 }
 
-void Avancer::execute(){
-	recepteur->avancer(2,2);
+void Peser::execute(){
+	recepteur->peser();
 }
 
-void Avancer::desexecute(){
+void Peser::desexecute(){
 	cout<<"non implémenté"<<endl;
 }

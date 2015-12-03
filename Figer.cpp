@@ -4,21 +4,21 @@
 #include <map>
 #include "Commande.h"
 #include "CommandeRobot.h"
-#include "Avancer.h"
+#include "Figer.h"
 #include "Robot.h"
 
 using namespace std;
 
-Avancer * Avancer::instance = new Avancer();
+Figer * Figer::instance = new Figer();
 
-Commande* Avancer::constructeurVirtuel(){
-	return new Avancer();
+Commande* Figer::constructeurVirtuel(){
+	return new Figer();
 }
 
-void Avancer::execute(){
-	recepteur->avancer(2,2);
+void Figer::execute(){
+	recepteur->figer();
 }
 
-void Avancer::desexecute(){
+void Figer::desexecute(){
 	cout<<"non implémenté"<<endl;
 }

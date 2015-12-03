@@ -5,19 +5,18 @@
 #include "Commande.h"
 #include "CommandeRobot.h"
 #include "Robot.h"
-#include "LecteurCommandes.h"
 
 using namespace std;
 
-#ifndef _COMMANDE_AVANCER_H
-#define _COMMANDE_AVANCER_H
+#ifndef _COMMANDE_RENCONTRER_PLOT_H
+#define _COMMANDE_RENCONTRER_PLOT_H
 
-class Avancer : public CommandeRobot {
+class RencontrerPlot : public CommandeRobot {
 	private:
-		static Avancer *instance;
+		static RencontrerPlot *instance;
 	public:
-		Avancer(string c);
-		Avancer(): CommandeRobot("Avancer"){}
+		RencontrerPlot(string c);
+		RencontrerPlot(): CommandeRobot("Rencontrer Plot"){}
 		Commande* constructeurVirtuel();
 
 		void execute();
