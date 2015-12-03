@@ -18,7 +18,7 @@ class Figer : public CommandeRobot {
 	public:
 		Figer(string c);
 		Figer(): CommandeRobot("Figer"){}
-		Commande* constructeurVirtuel();
+		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();

@@ -11,7 +11,8 @@ using namespace std;
 
 Tourner * Tourner::instance = new Tourner();
 
-Commande* Tourner::constructeurVirtuel(){
+Commande* Tourner::constructeurVirtuel(LecteurCommandes *lc){
+	//setRobot(lc->getRobot());
 	return new Tourner();
 }
 

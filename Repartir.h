@@ -17,7 +17,7 @@ class Repartir : public CommandeRobot {
 	public:
 		Repartir(string c);
 		Repartir(): CommandeRobot("Repartir"){}
-		Commande* constructeurVirtuel();
+		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();

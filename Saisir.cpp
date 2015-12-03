@@ -12,7 +12,7 @@ using namespace std;
 
 Saisir * Saisir::instance = new Saisir();
 
-Commande* Saisir::constructeurVirtuel(){
+Commande* Saisir::constructeurVirtuel(LecteurCommandes *lc){
 	return new Saisir();
 }
 

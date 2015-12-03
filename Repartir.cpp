@@ -11,7 +11,7 @@ using namespace std;
 
 Repartir * Repartir::instance = new Repartir();
 
-Commande* Repartir::constructeurVirtuel(){
+Commande* Repartir::constructeurVirtuel(LecteurCommandes *lc){
 	return new Repartir();
 }
 

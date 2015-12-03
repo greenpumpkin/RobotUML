@@ -17,7 +17,7 @@ class Poser : public CommandeRobot {
 	public:
 		Poser(string c);
 		Poser(): CommandeRobot("Poser"){}
-		Commande* constructeurVirtuel();
+		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();

@@ -12,7 +12,7 @@ using namespace std;
 //Instance de EtatAVideFacePlot
 Poser * Poser::instance = new Poser();
 
-Commande* Poser::constructeurVirtuel(){
+Commande* Poser::constructeurVirtuel(LecteurCommandes *lc){
 	return new Poser();
 }
 

@@ -17,7 +17,7 @@ class Tourner : public CommandeRobot {
 	public:
 		Tourner(string c);
 		Tourner(): CommandeRobot("Tourner"){}
-		Commande* constructeurVirtuel();
+		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();

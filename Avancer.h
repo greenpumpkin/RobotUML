@@ -5,7 +5,6 @@
 #include "Commande.h"
 #include "CommandeRobot.h"
 #include "Robot.h"
-#include "LecteurCommandes.h"
 
 using namespace std;
 
@@ -15,10 +14,12 @@ using namespace std;
 class Avancer : public CommandeRobot {
 	private:
 		static Avancer *instance;
+		int _x;
+		int _y;
 	public:
 		Avancer(string c);
 		Avancer(): CommandeRobot("Avancer"){}
-		Commande* constructeurVirtuel();
+		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();

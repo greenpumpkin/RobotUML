@@ -18,7 +18,7 @@ class EvaluerPlot : public CommandeRobot {
 	public:
 		EvaluerPlot(string c);
 		EvaluerPlot(): CommandeRobot("Evaluer Plot"){}
-		Commande* constructeurVirtuel();
+		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();

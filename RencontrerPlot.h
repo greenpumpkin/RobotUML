@@ -17,7 +17,7 @@ class RencontrerPlot : public CommandeRobot {
 	public:
 		RencontrerPlot(string c);
 		RencontrerPlot(): CommandeRobot("Rencontrer Plot"){}
-		Commande* constructeurVirtuel();
+		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();

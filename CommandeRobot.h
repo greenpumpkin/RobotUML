@@ -4,6 +4,7 @@
 #include <map>
 #include "Commande.h"
 #include "Robot.h"
+#include "LecteurCommandes.h"
 
 using namespace std;
 

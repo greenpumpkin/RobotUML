@@ -11,7 +11,7 @@ using namespace std;
 
 RencontrerPlot * RencontrerPlot::instance = new RencontrerPlot();
 
-Commande* RencontrerPlot::constructeurVirtuel(){
+Commande* RencontrerPlot::constructeurVirtuel(LecteurCommandes *lc){
 	return new RencontrerPlot();
 }
 

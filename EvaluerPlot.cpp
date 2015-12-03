@@ -11,7 +11,7 @@ using namespace std;
 
 EvaluerPlot * EvaluerPlot::instance = new EvaluerPlot();
 
-Commande* EvaluerPlot::constructeurVirtuel(){
+Commande* EvaluerPlot::constructeurVirtuel(LecteurCommandes *lc){
 	return new EvaluerPlot();
 }
 

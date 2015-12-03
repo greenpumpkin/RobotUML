@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 #include "Robot.h"
+#include "LecteurCommandes.h"
 
 using namespace std;
 
@@ -15,9 +16,9 @@ class Commande {
 	public:
 		static map<string, Commande*>& commandesPossibles();
 		Commande(string c);
-		static Commande* nouvelleCommande(string c);
+		static Commande* nouvelleCommande(string c, LecteurCommandes *lc);
 
-		virtual Commande* constructeurVirtuel()=0;
+		virtual Commande* constructeurVirtuel(LecteurCommandes *lc)=0;
 		virtual void execute()=0;
 		virtual void desexecute()=0;
 		virtual void setRobot(Robot *r)=0;

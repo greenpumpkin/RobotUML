@@ -17,7 +17,7 @@ class Saisir : public CommandeRobot {
 	public:
 		Saisir(string c);
 		Saisir(): CommandeRobot("Saisir"){}
-		Commande* constructeurVirtuel();
+		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();

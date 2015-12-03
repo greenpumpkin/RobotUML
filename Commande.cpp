@@ -15,8 +15,8 @@ map<string, Commande*>& Commande::commandesPossibles(){
 	return *commandesPossibles;
 }
 
-Commande* Commande::nouvelleCommande(string c){
-	return commandesPossibles()[c]->constructeurVirtuel();
+Commande* Commande::nouvelleCommande(string c, LecteurCommandes *lc){
+	return commandesPossibles()[c]->constructeurVirtuel(lc);
 }
 
 
