@@ -12,7 +12,7 @@ using namespace std;
 RencontrerPlot * RencontrerPlot::instance = new RencontrerPlot();
 
 Commande* RencontrerPlot::constructeurVirtuel(LecteurCommandes *lc){
-	return new RencontrerPlot();
+	return instance;
 }
 
 void RencontrerPlot::execute(){

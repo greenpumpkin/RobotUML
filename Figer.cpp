@@ -12,7 +12,7 @@ using namespace std;
 Figer * Figer::instance = new Figer();
 
 Commande* Figer::constructeurVirtuel(LecteurCommandes *lc){
-	return new Figer();
+	return instance;
 }
 
 void Figer::execute(){

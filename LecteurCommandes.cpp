@@ -10,13 +10,39 @@ void LecteurCommandes::execFichier(){
 	string ligne;
 	while(getline(fichierEntree, ligne)){
 		//Créer un objet commande et appeler execute dessus
-		string delimiter = " ";
-		string action = ligne.substr(0, ligne.find(delimiter));
-		p1= atoi( ligne.substr(2, ligne.find(delimiter)).c_str());
-		//cout<< "uuuuuuuuuuuuu" <<ligne.substr(2, ligne.find(delimiter)) <<"yyyyyyyyyy"<<endl;
-		p2= atoi( ligne.substr(4, ligne.find(delimiter)).c_str());
-		Commande *c=Commande::nouvelleCommande(action, this);
-		c->setRobot(robot);
+		Commande *c=Commande::nouvelleCommande(ligne, this);
+		//c->setRobot(robot);
 		c->execute(); 
 	}
+}
+
+int LecteurCommandes::getInt(string message){
+	cout << message;
+	string entier;
+	cin >> entier;
+	while(!isNumber(entier)) {
+	    cout << "Enter un nombre:";
+	    cin.clear();
+	    cin >> entier;
+	}  
+	return stoi(entier);
+}
+
+bool LecteurCommandes::isNumber(string s){
+    for (int i = 0; i < s.size(); i++)
+        if (!isdigit(s[i]))
+            return false;
+    return true;
+}
+
+string getDirection(string message){
+	cout << message;
+	string direction;
+	cin >> direction;
+	while(direction!="N"||direction!="O"||direction!="S"||direction!="E") {
+	    cout << "Enter une direction (N, O, S, E):";
+	    cin.clear();
+	    cin >> direction;
+	}  
+	return direction;
 }

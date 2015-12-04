@@ -12,8 +12,6 @@ class LecteurCommandes {
 	private:
 		istream& fichierEntree;
 		Robot *robot;
-		int p1;
-		int p2;
 		//Pile des commandes exécutées pour le 3.6
 	public:
 		LecteurCommandes(istream& is, Robot *r) : fichierEntree(is), robot(r){}
@@ -22,8 +20,9 @@ class LecteurCommandes {
 		void execFichier();
 
 		Robot *getRobot(){return robot;}
-		int getX(){ return p1;}
-		int getY(){ return p2;}
+		int getInt(string message);
+		bool isNumber(string s);
+		string getDirection(string message);
 };
 
 #endif

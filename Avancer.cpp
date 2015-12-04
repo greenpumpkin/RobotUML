@@ -12,15 +12,14 @@ using namespace std;
 Avancer * Avancer::instance = new Avancer();
 
 Commande* Avancer::constructeurVirtuel(LecteurCommandes *lc){
-	//setRobot(lc->getRobot()); Probleme: on a perdu recepeteur quand on appelle execute (compile mais ne s'execute pas)
-	_x=lc->getX();
-	_y=lc->getY();
-	cout<< "Y X dans le constr d'avancer: "<<_y << _x <<endl;
-	//Renvoyer une erreur si getY ou getX sont nuls
-	return new Avancer();//Avancer(lc->getInt())
+	_x=lc->getInt("Donner un entier pour la position X: ");
+	_y=lc->getInt("Donner un entier pour la position Y: ");
+	cout <<"DANS CONSTRUCTEUR: "<< _y << _x <<endl;
+	return instance;
 }
 
 void Avancer::execute(){
+	cout <<"DANS EXECUTE: "<< _y << _x <<endl;
 	recepteur->avancer(_x,_y);
 }
 

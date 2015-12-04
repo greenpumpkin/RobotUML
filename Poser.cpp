@@ -13,7 +13,7 @@ using namespace std;
 Poser * Poser::instance = new Poser();
 
 Commande* Poser::constructeurVirtuel(LecteurCommandes *lc){
-	return new Poser();
+	return instance;
 }
 
 void Poser::execute(){

@@ -12,7 +12,7 @@ using namespace std;
 Repartir * Repartir::instance = new Repartir();
 
 Commande* Repartir::constructeurVirtuel(LecteurCommandes *lc){
-	return new Repartir();
+	return instance;
 }
 
 void Repartir::execute(){

@@ -13,7 +13,7 @@ Tourner * Tourner::instance = new Tourner();
 
 Commande* Tourner::constructeurVirtuel(LecteurCommandes *lc){
 	//setRobot(lc->getRobot());
-	return new Tourner();
+	return instance;
 }
 
 void Tourner::execute(){
