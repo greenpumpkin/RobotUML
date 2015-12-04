@@ -18,10 +18,8 @@ class CommandeRobot : public Commande {
 		CommandeRobot(string c): Commande(c){}
 
 	public:
-		//virtual Commande* constructeurVirtuel()=0;
 		virtual void execute()=0;
 		virtual void desexecute()=0;
-		void setRobot(Robot * r){ recepteur=r;}
 };
 
 #endif

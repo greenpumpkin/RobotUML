@@ -9,9 +9,16 @@ using namespace std;
 void LecteurCommandes::execFichier(){
 	string ligne;
 	while(getline(fichierEntree, ligne)){
+		cout<<"ici"<<endl;
+		if(ligne=="")
+			getline(fichierEntree, ligne);
+		else if (ligne!="Avancer" && ligne!="Tourner"){
+			cout<<"La commande "<<ligne<<" n'existe pas encore."<<endl;
+			getline(fichierEntree, ligne);
+		}
+
 		//Créer un objet commande et appeler execute dessus
 		Commande *c=Commande::nouvelleCommande(ligne, this);
-		//c->setRobot(robot);
 		c->execute(); 
 	}
 }
@@ -21,7 +28,7 @@ int LecteurCommandes::getInt(string message){
 	string entier;
 	cin >> entier;
 	while(!isNumber(entier)) {
-	    cout << "Enter un nombre:";
+	    cout << "Ce n'est pas un entier. Enter un entier:";
 	    cin.clear();
 	    cin >> entier;
 	}  
@@ -35,12 +42,13 @@ bool LecteurCommandes::isNumber(string s){
     return true;
 }
 
-string getDirection(string message){
+string LecteurCommandes::getDirection(string message){
 	cout << message;
 	string direction;
 	cin >> direction;
-	while(direction!="N"||direction!="O"||direction!="S"||direction!="E") {
-	    cout << "Enter une direction (N, O, S, E):";
+	cout<<"direction: "<<direction<<endl;
+	while(direction!="N" && direction!="O" && direction!="S" && direction!="E") {
+	    cout << "Ce n'est pas une direction. Enter une direction (N, O, S, E):";
 	    cin.clear();
 	    cin >> direction;
 	}  

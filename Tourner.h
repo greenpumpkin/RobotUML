@@ -14,6 +14,7 @@ using namespace std;
 class Tourner : public CommandeRobot {
 	private:
 		static Tourner *instance;
+		string _direction;
 	public:
 		Tourner(string c);
 		Tourner(): CommandeRobot("Tourner"){}
