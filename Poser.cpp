@@ -13,6 +13,7 @@ using namespace std;
 Poser * Poser::instance = new Poser();
 
 Commande* Poser::constructeurVirtuel(LecteurCommandes *lc){
+	recepteur=lc->getRobot();
 	return instance;
 }
 

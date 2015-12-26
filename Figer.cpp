@@ -12,6 +12,7 @@ using namespace std;
 Figer * Figer::instance = new Figer();
 
 Commande* Figer::constructeurVirtuel(LecteurCommandes *lc){
+	recepteur=lc->getRobot();
 	return instance;
 }
 

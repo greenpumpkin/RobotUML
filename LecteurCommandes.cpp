@@ -9,10 +9,10 @@ using namespace std;
 void LecteurCommandes::execFichier(){
 	string ligne;
 	while(getline(fichierEntree, ligne)){
-		cout<<"ici"<<endl;
 		if(ligne=="")
 			getline(fichierEntree, ligne);
-		else if (ligne!="Avancer" && ligne!="Tourner"){
+		else if (ligne!="Avancer" && ligne!="Tourner" && ligne!="Saisir" && ligne!="Poser" && ligne!="Peser" 
+				&& ligne!="Rencontrer Plot" && ligne!="Evaluer Plot" && ligne!="Figer" && ligne!="Repartir"){
 			cout<<"La commande "<<ligne<<" n'existe pas encore."<<endl;
 			getline(fichierEntree, ligne);
 		}

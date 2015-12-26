@@ -12,7 +12,8 @@ using namespace std;
 EvaluerPlot * EvaluerPlot::instance = new EvaluerPlot();
 
 Commande* EvaluerPlot::constructeurVirtuel(LecteurCommandes *lc){
-	return new EvaluerPlot();
+	recepteur=lc->getRobot();
+	return instance;
 }
 
 void EvaluerPlot::execute(){

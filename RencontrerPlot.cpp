@@ -12,12 +12,14 @@ using namespace std;
 RencontrerPlot * RencontrerPlot::instance = new RencontrerPlot();
 
 Commande* RencontrerPlot::constructeurVirtuel(LecteurCommandes *lc){
+	int hauteur=lc->getInt("Donner un entier pour la hauteur du plot: ");
+	_plot=Plot(hauteur);
+	recepteur=lc->getRobot();
 	return instance;
 }
 
 void RencontrerPlot::execute(){
-	Plot p1(1);
-	recepteur->rencontrerPlot(p1);
+	recepteur->rencontrerPlot(_plot);
 }
 
 void RencontrerPlot::desexecute(){

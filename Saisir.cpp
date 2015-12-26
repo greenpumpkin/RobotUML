@@ -13,12 +13,14 @@ using namespace std;
 Saisir * Saisir::instance = new Saisir();
 
 Commande* Saisir::constructeurVirtuel(LecteurCommandes *lc){
+	int poids=lc->getInt("Donner un entier pour le poids de l'objet: ");
+	_obj=Objet(poids);
+	recepteur=lc->getRobot();
 	return instance;
 }
 
 void Saisir::execute(){
-	Objet o(5);
-	recepteur->saisir(o);
+	recepteur->saisir(_obj);
 }
 
 void Saisir::desexecute(){

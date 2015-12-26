@@ -5,6 +5,8 @@
 #include "Commande.h"
 #include "CommandeRobot.h"
 #include "Robot.h"
+#include "Plot.h"
+
 
 using namespace std;
 
@@ -14,6 +16,7 @@ using namespace std;
 class RencontrerPlot : public CommandeRobot {
 	private:
 		static RencontrerPlot *instance;
+		Plot _plot;
 	public:
 		RencontrerPlot(string c);
 		RencontrerPlot(): CommandeRobot("Rencontrer Plot"){}
