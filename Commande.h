@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <map>
+#include <stack>
 #include "Robot.h"
 #include "LecteurCommandes.h"
 
@@ -14,6 +15,7 @@ class Commande {
 	private:
 		bool reversible;
 	public:
+		static stack<Commande> commandesExecutees;
 		static map<string, Commande*>& commandesPossibles();
 		Commande(string c);
 		static Commande* nouvelleCommande(string c, LecteurCommandes *lc);
