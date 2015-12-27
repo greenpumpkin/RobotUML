@@ -15,6 +15,11 @@ map<string, Commande*>& Commande::commandesPossibles(){
 	return *commandesPossibles;
 }
 
+stack<Commande*>& Commande::commandesExecutees(){
+	static stack<Commande*>* commandesExecutees= new stack<Commande*>();
+	return *commandesExecutees;
+}
+
 Commande* Commande::nouvelleCommande(string c, LecteurCommandes *lc){
 	return commandesPossibles()[c]->constructeurVirtuel(lc);
 }

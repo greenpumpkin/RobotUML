@@ -3,24 +3,20 @@
 #include <string>
 #include <map>
 #include "Commande.h"
-#include "CommandeRobot.h"
 #include "Robot.h"
+#include "LecteurCommandes.h"
 
 using namespace std;
 
-#ifndef _COMMANDE_AVANCER_H
-#define _COMMANDE_AVANCER_H
+#ifndef _DEFAIRE_H
+#define _DEFAIRE_H
 
-class Avancer : public CommandeRobot {
+class Defaire : public Commande {
 	private:
-		static Avancer *instance;
-		int _x;
-		int _y;
-		int _old_x;
-		int _old_y;
+		static Defaire *instance;
 	public:
-		Avancer(string c);
-		Avancer(): CommandeRobot("Avancer"){}
+		Defaire(string c);
+		Defaire(): Commande("Defaire"){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
