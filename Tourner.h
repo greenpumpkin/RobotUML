@@ -15,6 +15,7 @@ class Tourner : public CommandeRobot {
 	private:
 		static Tourner *instance;
 		string _direction;
+		string _old_direction;
 	public:
 		Tourner(string c);
 		Tourner(): CommandeRobot("Tourner"){}

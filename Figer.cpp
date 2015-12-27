@@ -17,9 +17,10 @@ Commande* Figer::constructeurVirtuel(LecteurCommandes *lc){
 }
 
 void Figer::execute(){
+	commandesExecutees().push(instance);
 	recepteur->figer();
 }
 
 void Figer::desexecute(){
-	cout<<"non implémenté"<<endl;
+	recepteur->repartir();
 }

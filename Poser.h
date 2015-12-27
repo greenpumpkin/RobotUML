@@ -5,6 +5,7 @@
 #include "Commande.h"
 #include "CommandeRobot.h"
 #include "Robot.h"
+#include "Objet.h"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ using namespace std;
 class Poser : public CommandeRobot {
 	private:
 		static Poser *instance;
+		Objet _old_objet;
 	public:
 		Poser(string c);
 		Poser(): CommandeRobot("Poser"){}

@@ -12,7 +12,7 @@ void LecteurCommandes::execFichier(){
 		if(ligne=="")
 			getline(fichierEntree, ligne);
 		else if (ligne!="Avancer" && ligne!="Tourner" && ligne!="Saisir" && ligne!="Poser" && ligne!="Peser" 
-				&& ligne!="Rencontrer Plot" && ligne!="Evaluer Plot" && ligne!="Figer" && ligne!="Repartir"){
+				&& ligne!="Rencontrer Plot" && ligne!="Evaluer Plot" && ligne!="Figer" && ligne!="Repartir" && ligne!="Defaire"){
 			cout<<"La commande "<<ligne<<" n'existe pas encore."<<endl;
 			getline(fichierEntree, ligne);
 		}

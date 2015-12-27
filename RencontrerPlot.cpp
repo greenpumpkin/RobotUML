@@ -15,13 +15,15 @@ Commande* RencontrerPlot::constructeurVirtuel(LecteurCommandes *lc){
 	int hauteur=lc->getInt("Donner un entier pour la hauteur du plot: ");
 	_plot=Plot(hauteur);
 	recepteur=lc->getRobot();
+	_old_direction= recepteur->getDirection();
 	return instance;
 }
 
 void RencontrerPlot::execute(){
+	commandesExecutees().push(instance);
 	recepteur->rencontrerPlot(_plot);
 }
 
 void RencontrerPlot::desexecute(){
-	cout<<"non implémenté"<<endl;
+	recepteur->tourner(_old_direction);
 }

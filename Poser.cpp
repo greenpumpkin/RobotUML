@@ -14,13 +14,15 @@ Poser * Poser::instance = new Poser();
 
 Commande* Poser::constructeurVirtuel(LecteurCommandes *lc){
 	recepteur=lc->getRobot();
+	_old_objet= recepteur->getObjet();
 	return instance;
 }
 
 void Poser::execute(){
+	commandesExecutees().push(instance);
 	recepteur->poser();
 }
 
 void Poser::desexecute(){
-	cout<<"non implémenté"<<endl;
+	recepteur->saisir(_old_objet);
 }

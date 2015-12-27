@@ -21,5 +21,5 @@ void EvaluerPlot::execute(){
 }
 
 void EvaluerPlot::desexecute(){
-	cout<<"non implémenté"<<endl;
+	cout<<"La commande 'Evaluer Plot' n'est pas réversible"<<endl;
 }

@@ -21,5 +21,8 @@ void Peser::execute(){
 }
 
 void Peser::desexecute(){
-	cout<<"non implémenté"<<endl;
+	cout<<"La commande 'Peser' n'est pas réversible"<<endl;
 }
+
+
+

@@ -21,5 +21,6 @@ void Defaire::execute(){
 	commandesExecutees().pop();
 }
 
+/*
 void Defaire::desexecute(){
-}
+}*/

@@ -22,7 +22,7 @@ class Commande {
 
 		virtual Commande* constructeurVirtuel(LecteurCommandes *lc)=0;
 		virtual void execute()=0;
-		virtual void desexecute()=0;
+		virtual void desexecute(){};
 };
 
 #endif

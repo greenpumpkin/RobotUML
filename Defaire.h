@@ -20,7 +20,7 @@ class Defaire : public Commande {
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
-		void desexecute();
+		//void desexecute();
 };
 
 #endif

@@ -16,10 +16,6 @@ class CommandeRobot : public Commande {
 		Robot *recepteur;
 
 		CommandeRobot(string c): Commande(c){}
-
-	public:
-		virtual void execute()=0;
-		virtual void desexecute()=0;
 };
 
 #endif

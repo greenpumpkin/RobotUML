@@ -17,6 +17,7 @@ class RencontrerPlot : public CommandeRobot {
 	private:
 		static RencontrerPlot *instance;
 		Plot _plot;
+		string _old_direction;
 	public:
 		RencontrerPlot(string c);
 		RencontrerPlot(): CommandeRobot("Rencontrer Plot"){}

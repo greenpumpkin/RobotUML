@@ -20,9 +20,10 @@ Commande* Saisir::constructeurVirtuel(LecteurCommandes *lc){
 }
 
 void Saisir::execute(){
+	commandesExecutees().push(instance);
 	recepteur->saisir(_obj);
 }
 
 void Saisir::desexecute(){
-	cout<<"non implémenté"<<endl;
+	recepteur->poser();
 }

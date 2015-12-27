@@ -17,9 +17,10 @@ Commande* Repartir::constructeurVirtuel(LecteurCommandes *lc){
 }
 
 void Repartir::execute(){
+	commandesExecutees().push(instance);
 	recepteur->repartir();
 }
 
 void Repartir::desexecute(){
-	cout<<"non implémenté"<<endl;
+	recepteur->figer();
 }
