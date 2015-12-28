@@ -9,6 +9,7 @@ using namespace std;
 void LecteurCommandes::execFichier(){
 	string ligne;
 	while(getline(fichierEntree, ligne)){
+		cout<<"----------******------------"<< endl;
 		if(ligne=="")
 			getline(fichierEntree, ligne);
 		else if (ligne!="Avancer" && ligne!="Tourner" && ligne!="Saisir" && ligne!="Poser" && ligne!="Peser" 

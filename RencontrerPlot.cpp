@@ -15,7 +15,6 @@ Commande* RencontrerPlot::constructeurVirtuel(LecteurCommandes *lc){
 	int hauteur=lc->getInt("Donner un entier pour la hauteur du plot: ");
 	_plot=Plot(hauteur);
 	recepteur=lc->getRobot();
-	_old_direction= recepteur->getDirection();
 	return instance;
 }
 
@@ -25,5 +24,6 @@ void RencontrerPlot::execute(){
 }
 
 void RencontrerPlot::desexecute(){
-	recepteur->tourner(_old_direction);
+	//recepteur->tourner("N");
+	cout<<"La commande 'Rencontrer Plot' n'est pas réversible, il suffit de tourner"<<endl;
 }
