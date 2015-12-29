@@ -17,7 +17,7 @@ class EvaluerPlot : public CommandeRobot {
 		static EvaluerPlot *instance;
 	public:
 		EvaluerPlot(string c);
-		EvaluerPlot(): CommandeRobot("Evaluer Plot"){}
+		EvaluerPlot(): CommandeRobot("evaluer plot"){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

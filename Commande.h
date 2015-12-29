@@ -12,8 +12,6 @@ using namespace std;
 #define _COMMANDE_H
 
 class Commande {
-	private:
-		bool reversible;
 	public:
 		static stack<Commande*>& commandesExecutees();
 		static map<string, Commande*>& commandesPossibles();

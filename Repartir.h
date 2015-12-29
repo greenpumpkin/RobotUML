@@ -16,7 +16,7 @@ class Repartir : public CommandeRobot {
 		static Repartir *instance;
 	public:
 		Repartir(string c);
-		Repartir(): CommandeRobot("Repartir"){}
+		Repartir(): CommandeRobot("repartir"){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

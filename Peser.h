@@ -17,7 +17,7 @@ class Peser : public CommandeRobot {
 	
 	public:
 		Peser(string c);
-		Peser() : CommandeRobot("Peser"){}
+		Peser() : CommandeRobot("peser"){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

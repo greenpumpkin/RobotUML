@@ -16,7 +16,7 @@ class Defaire : public Commande {
 		static Defaire *instance;
 	public:
 		Defaire(string c);
-		Defaire(): Commande("Defaire"){}
+		Defaire(): Commande("defaire"){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

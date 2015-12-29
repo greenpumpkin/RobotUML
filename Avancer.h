@@ -20,7 +20,7 @@ class Avancer : public CommandeRobot {
 		int _old_y;
 	public:
 		Avancer(string c);
-		Avancer(): CommandeRobot("Avancer"){}
+		Avancer(): CommandeRobot("avancer"){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

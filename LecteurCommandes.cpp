@@ -1,6 +1,7 @@
 #include <iostream>     
 #include <fstream>
 #include <string>
+#include <algorithm>
 #include "LecteurCommandes.h"
 #include "Commande.h"
 
@@ -10,10 +11,13 @@ void LecteurCommandes::execFichier(){
 	string ligne;
 	while(getline(fichierEntree, ligne)){
 		cout<<"----------******------------"<< endl;
-		if(ligne=="")
+		transform(ligne.begin(), ligne.end(), ligne.begin(), ::tolower);
+		if(ligne==""){
 			getline(fichierEntree, ligne);
-		else if (ligne!="Avancer" && ligne!="Tourner" && ligne!="Saisir" && ligne!="Poser" && ligne!="Peser" 
-				&& ligne!="Rencontrer Plot" && ligne!="Evaluer Plot" && ligne!="Figer" && ligne!="Repartir" && ligne!="Defaire"){
+			transform(ligne.begin(), ligne.end(), ligne.begin(), ::tolower);
+		}
+		else if (ligne!="avancer" && ligne!="tourner" && ligne!="saisir" && ligne!="poser" && ligne!="peser" 
+				&& ligne!="rencontrer plot" && ligne!="evaluer plot" && ligne!="figer" && ligne!="repartir" && ligne!="defaire"){
 			cout<<"La commande "<<ligne<<" n'existe pas encore."<<endl;
 			getline(fichierEntree, ligne);
 		}
