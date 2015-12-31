@@ -12,7 +12,7 @@ EXEC = ./Robot
 SRC_FILES = $(wildcard $(SRC)/*.cpp)
 OBJ_FILES = $(patsubst $(SRC)/%.cpp, $(SRC)/%.o, $(SRC_FILES))
 
-# Targets
+
 
 all: $(EXEC)
 
@@ -23,7 +23,7 @@ $(EXEC): $(OBJ_FILES)
 $(OBJ_FILES): $(SRC)/%.o : $(SRC)/%.cpp
 		$(CXX_COMPILE) -c $< -o $@
 		
-# Clean
+
 
 clean:
 		rm -rf *.o Robot
