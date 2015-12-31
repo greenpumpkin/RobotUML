@@ -23,6 +23,7 @@ class LecteurCommandes {
 		int getInt(string message);
 		bool isNumber(string s);
 		string getDirection(string message);
+		
 };
 
 #endif

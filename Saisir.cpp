@@ -1,12 +1,4 @@
-#include <iostream>     
-#include <fstream>
-#include <string>
-#include <map>
-#include "Commande.h"
-#include "CommandeRobot.h"
 #include "Saisir.h"
-#include "Robot.h"
-#include "Objet.h"
 
 using namespace std;
 

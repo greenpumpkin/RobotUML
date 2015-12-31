@@ -1,12 +1,4 @@
-#include <iostream>     
-#include <fstream>
-#include <string>
-#include <map>
-#include "Commande.h"
-#include "CommandeRobot.h"
 #include "Figer.h"
-#include "Robot.h"
-
 using namespace std;
 
 Figer * Figer::instance = new Figer();

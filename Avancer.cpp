@@ -1,11 +1,4 @@
-#include <iostream>     
-#include <fstream>
-#include <string>
-#include <map>
-#include "Commande.h"
-#include "CommandeRobot.h"
 #include "Avancer.h"
-#include "Robot.h"
 
 using namespace std;
 

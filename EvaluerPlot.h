@@ -1,7 +1,5 @@
 #include <iostream>     
-#include <fstream>
 #include <string>
-#include <map>
 #include "Commande.h"
 #include "CommandeRobot.h"
 #include "Robot.h"

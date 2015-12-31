@@ -1,7 +1,3 @@
-#include <iostream>     
-#include <fstream>
-#include <string>
-#include <map>
 #include "Commande.h"
 #include "CommandeRobot.h"
 #include "Defaire.h"
@@ -20,7 +16,3 @@ void Defaire::execute(){
 	lastCommande->desexecute();
 	commandesExecutees().pop();
 }
-
-/*
-void Defaire::desexecute(){
-}*/

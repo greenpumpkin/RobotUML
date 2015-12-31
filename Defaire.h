@@ -1,10 +1,7 @@
 #include <iostream>     
-#include <fstream>
 #include <string>
-#include <map>
 #include "Commande.h"
 #include "Robot.h"
-#include "LecteurCommandes.h"
 
 using namespace std;
 
@@ -20,7 +17,6 @@ class Defaire : public Commande {
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
-		//void desexecute();
 };
 
 #endif

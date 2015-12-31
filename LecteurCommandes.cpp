@@ -1,30 +1,54 @@
-#include <iostream>     
-#include <fstream>
-#include <string>
+#include <sstream>
+#include <typeinfo>
+#include <vector>
+#include <cctype>
 #include <algorithm>
+
 #include "LecteurCommandes.h"
 #include "Commande.h"
 
 using namespace std;
 
-void LecteurCommandes::execFichier(){
-	string ligne;
-	while(getline(fichierEntree, ligne)){
-		cout<<"----------******------------"<< endl;
-		transform(ligne.begin(), ligne.end(), ligne.begin(), ::tolower);
-		if(ligne==""){
-			getline(fichierEntree, ligne);
-			transform(ligne.begin(), ligne.end(), ligne.begin(), ::tolower);
-		}
-		else if (ligne!="avancer" && ligne!="tourner" && ligne!="saisir" && ligne!="poser" && ligne!="peser" 
-				&& ligne!="rencontrer plot" && ligne!="evaluer plot" && ligne!="figer" && ligne!="repartir" && ligne!="defaire"){
-			cout<<"La commande "<<ligne<<" n'existe pas encore."<<endl;
-			getline(fichierEntree, ligne);
-		}
 
-		//Créer un objet commande et appeler execute dessus
-		Commande *c=Commande::nouvelleCommande(ligne, this);
-		c->execute(); 
+static vector<string> commandes;
+
+bool isCommande(string ligne)
+{
+	if(find(commandes.begin(), commandes.end(), ligne) != commandes.end()) {
+		return true;
+	}
+	return false;
+}
+
+
+void LecteurCommandes::execFichier(){
+	for(auto it = Commande::commandesPossibles().cbegin(); it != Commande::commandesPossibles().cend(); ++it)
+	{
+		commandes.push_back(it->first);
+	}
+
+	while(true)
+	{
+		string ligne;
+		cout <<"Commande :"<< endl;
+		cin >> ligne;
+		transform(ligne.begin(), ligne.end(),ligne.begin(), ::tolower);
+		if (!isCommande(ligne)) 
+		{
+			cout <<"Cette commande n'existe pas encore"<< endl;
+		} 
+		else 
+		{
+		Commande * command = Commande::nouvelleCommande(ligne, this);
+		try 
+		{
+		command->execute();	
+		} 
+		catch(Etat::Action_Impossible)
+		{
+		cout <<"Action impossible vu l'état"<< endl;
+		}
+		}
 	}
 }
 

@@ -1,7 +1,3 @@
-#include <iostream>     
-#include <fstream>
-#include <string>
-#include <map>
 #include "Commande.h"
 
 using namespace std;
