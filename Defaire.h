@@ -15,6 +15,7 @@ class Defaire : public Commande {
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
+		bool isReversible();
 };
 
 #endif

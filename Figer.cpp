@@ -13,3 +13,8 @@ void Figer::execute(){
 void Figer::desexecute(){
 	recepteur->repartir();
 }
+
+bool Figer::isReversible(){
+	return true;
+}
+

@@ -13,13 +13,13 @@ class Figer : public CommandeRobot {
 	
 	public:
 		
-		/* Figer(string c); */
 
 		Figer(Robot *r): CommandeRobot("Figer", r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();
+		bool isReversible();
 };
 
 #endif

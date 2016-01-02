@@ -12,13 +12,11 @@ using namespace std;
 class Peser : public CommandeRobot {
 	
 	public:
-		//Peser(string c);
-		
 		Peser(Robot * r) : CommandeRobot("peser", r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
-		void desexecute();
+		bool isReversible();
 };
 
 #endif

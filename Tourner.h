@@ -14,12 +14,12 @@ class Tourner : public CommandeRobot {
 		string _direction;
 		string _old_direction;
 	public:
-		//Tourner(string c);
 		Tourner(Robot *r): CommandeRobot("tourner",r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();
+		bool isReversible();
 };
 
 #endif

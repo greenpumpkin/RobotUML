@@ -26,6 +26,7 @@ class Commande {
 		virtual Commande* constructeurVirtuel(LecteurCommandes *lc)=0;
 		virtual void execute()=0;
 		virtual void desexecute(){};
+		virtual bool isReversible()=0;
 };
 
 #endif

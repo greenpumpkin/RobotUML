@@ -12,12 +12,12 @@ using namespace std;
 class Repartir : public CommandeRobot {
 	
 	public:
-		//Repartir(string c);
 		Repartir(Robot *r): CommandeRobot("repartir",r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();
+		bool isReversible();
 };
 
 #endif

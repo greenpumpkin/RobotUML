@@ -16,3 +16,7 @@ void Saisir::execute(){
 void Saisir::desexecute(){
 	recepteur->poser();
 }
+
+bool Saisir::isReversible(){
+	return true;
+}

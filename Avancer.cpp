@@ -18,3 +18,7 @@ void Avancer::execute(){
 void Avancer::desexecute(){
 	recepteur->avancer(_old_x, _old_y);
 }
+
+bool Avancer::isReversible(){
+	return true;
+}

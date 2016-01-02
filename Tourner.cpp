@@ -16,3 +16,7 @@ void Tourner::execute(){
 void Tourner::desexecute(){
 	recepteur->tourner(_old_direction);
 }
+
+bool Tourner::isReversible(){
+	return true;
+}

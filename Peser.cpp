@@ -11,8 +11,8 @@ void Peser::execute(){
 	recepteur->peser();
 }
 
-void Peser::desexecute(){
-	cout<<"La commande 'Peser' n'est pas réversible"<<endl;
+bool Peser::isReversible(){
+	return false;
 }
 
 

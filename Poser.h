@@ -14,12 +14,12 @@ class Poser : public CommandeRobot {
 	private:
 		Objet _old_objet;
 	public:
-		//Poser(string c);
-		Poser(Robot *r): CommandeRobot("Poser",r){}
+		Poser(Robot *r): CommandeRobot("poser",r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
 		void desexecute();
+		bool isReversible();
 };
 
 #endif

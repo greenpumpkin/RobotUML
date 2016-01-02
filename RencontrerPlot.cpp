@@ -13,7 +13,6 @@ void RencontrerPlot::execute(){
 	recepteur->rencontrerPlot(_plot);
 }
 
-void RencontrerPlot::desexecute(){
-	//recepteur->tourner("N");
-	cout<<"La commande 'Rencontrer Plot' n'est pas réversible, il suffit de tourner"<<endl;
+bool RencontrerPlot::isReversible(){
+	return false;
 }

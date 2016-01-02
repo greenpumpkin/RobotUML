@@ -15,3 +15,7 @@ void Poser::execute(){
 void Poser::desexecute(){
 	recepteur->saisir(_old_objet);
 }
+
+bool Poser::isReversible(){
+	return true;
+}

@@ -33,6 +33,7 @@ class Avancer : public CommandeRobot {
 
 		void execute();
 		void desexecute();
+		bool isReversible();
 };
 
 #endif

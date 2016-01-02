@@ -11,6 +11,13 @@ Commande* Defaire::constructeurVirtuel(LecteurCommandes *lc){
 
 void Defaire::execute(){
 	Commande *lastCommande= commandesExecutees().top();
-	lastCommande->desexecute();
+	if (lastCommande->isReversible())
+		lastCommande->desexecute();
+	else 
+		cout<<"La dernière commande n'est pas réversible" <<endl;
 	commandesExecutees().pop();
+}
+
+bool Defaire::isReversible(){
+	return false;
 }

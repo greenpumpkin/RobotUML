@@ -13,13 +13,11 @@ class EvaluerPlot : public CommandeRobot {
 
 	public:
 		
-		/* EvaluerPlot(string c); */
-		
 		EvaluerPlot(Robot *r): CommandeRobot("evaluer plot",r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
-		void desexecute();
+		bool isReversible();
 };
 
 #endif

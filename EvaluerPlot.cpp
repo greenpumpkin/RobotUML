@@ -11,6 +11,7 @@ void EvaluerPlot::execute(){
 	recepteur->evaluerPlot();
 }
 
-void EvaluerPlot::desexecute(){
-	cout<<"La commande 'Evaluer Plot' n'est pas réversible"<<endl;
+bool EvaluerPlot::isReversible(){
+	return false;
 }
+

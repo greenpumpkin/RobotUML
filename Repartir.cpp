@@ -14,3 +14,7 @@ void Repartir::execute(){
 void Repartir::desexecute(){
 	recepteur->figer();
 }
+
+bool Repartir::isReversible(){
+	return true;
+}
