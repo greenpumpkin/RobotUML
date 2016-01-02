@@ -11,10 +11,13 @@ using namespace std;
 #define _COMMANDE_ROBOT_H
 
 class CommandeRobot : public Commande {
+
 	protected:
+
 		Robot *recepteur;
 
-		CommandeRobot(string c): Commande(c){}
+		CommandeRobot(string c, Robot * _r): Commande(c), recepteur(_r) {}
+		
 };
 
 #endif

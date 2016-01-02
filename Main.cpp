@@ -8,9 +8,20 @@
 #include "Robot.h"
 #include "Etat.h"
 #include "EtatFige.h"
-#include "Commande.h"
 #include "AfficheurConsole.h"
 #include "LecteurCommandes.h"
+#include "Commande.h"
+#include "Avancer.h"
+#include "Defaire.h"
+#include "EvaluerPlot.h"
+#include "Figer.h"
+#include "Peser.h"
+#include "Poser.h"
+#include "RencontrerPlot.h"
+#include "Repartir.h"
+#include "Saisir.h"
+#include "Tourner.h"
+
 #include <iostream>
 
 using namespace std;
@@ -26,7 +37,17 @@ int main()
 	r->notifier();
 
 	//Si commandes sur l'entrée standard
-	LecteurCommandes lect(r);
+	LecteurCommandes lect;
+	Avancer avancer(r);
+	Defaire defaire;
+	EvaluerPlot ep(r);
+	Figer figer(r);
+	Peser peser(r);
+	Poser poser(r);
+	RencontrerPlot rp(r);
+	Repartir repartir(r);
+	Saisir saisir(r);
+	Tourner tourner(r);
 	lect.execFichier();
 
 	//Si commandes dans un fichier texte:

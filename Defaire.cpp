@@ -5,10 +5,8 @@
 
 using namespace std;
 
-Defaire * Defaire::instance = new Defaire();
-
 Commande* Defaire::constructeurVirtuel(LecteurCommandes *lc){
-	return instance;
+	return new Defaire();
 }
 
 void Defaire::execute(){

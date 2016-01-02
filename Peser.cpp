@@ -2,15 +2,12 @@
 
 using namespace std;
 
-Peser * Peser::instance = new Peser();
-
 Commande* Peser::constructeurVirtuel(LecteurCommandes *lc){
-	recepteur=lc->getRobot();
-	return instance;
+	return new Peser(recepteur);
 }
 
 void Peser::execute(){
-	commandesExecutees().push(instance);
+	commandesExecutees().push(this);
 	recepteur->peser();
 }
 

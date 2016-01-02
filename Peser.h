@@ -10,12 +10,11 @@ using namespace std;
 #define _COMMANDE_PESER_H
 
 class Peser : public CommandeRobot {
-	private:
-		static Peser *instance;
 	
 	public:
-		Peser(string c);
-		Peser() : CommandeRobot("peser"){}
+		//Peser(string c);
+		
+		Peser(Robot * r) : CommandeRobot("peser", r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

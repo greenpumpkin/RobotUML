@@ -2,19 +2,16 @@
 
 using namespace std;
 
-Avancer * Avancer::instance = new Avancer();
-
 Commande* Avancer::constructeurVirtuel(LecteurCommandes *lc){
 	_x=lc->getInt("Donner un entier pour la position X: ");
 	_y=lc->getInt("Donner un entier pour la position Y: ");
-	recepteur=lc->getRobot();
 	_old_x= recepteur->getPosition().getX();
 	_old_y= recepteur->getPosition().getY();
-	return instance;
+	return new Avancer(recepteur);
 }
 
 void Avancer::execute(){
-	commandesExecutees().push(instance);
+	commandesExecutees().push(this);
 	recepteur->avancer(_x,_y);
 }
 

@@ -2,17 +2,13 @@
 
 using namespace std;
 
-//Instance de EtatAVideFacePlot
-Poser * Poser::instance = new Poser();
-
 Commande* Poser::constructeurVirtuel(LecteurCommandes *lc){
-	recepteur=lc->getRobot();
 	_old_objet= recepteur->getObjet();
-	return instance;
+	return new Poser(recepteur);
 }
 
 void Poser::execute(){
-	commandesExecutees().push(instance);
+	commandesExecutees().push(this);
 	recepteur->poser();
 }
 

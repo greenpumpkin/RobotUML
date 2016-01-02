@@ -17,8 +17,8 @@ using namespace std;
 class EtatFige : public Etat {
 
 	private:
-		static EtatFige *instance;
 		static Etat *ancienEtat;
+		static EtatFige *instance;
 
 	protected:
 		//Constructeur

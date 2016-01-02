@@ -1,3 +1,4 @@
+
 #include <iostream>     
 #include <fstream>
 #include <string>
@@ -12,10 +13,14 @@ using namespace std;
 #define _COMMANDE_H
 
 class Commande {
+	
 	public:
+
 		static stack<Commande*>& commandesExecutees();
 		static map<string, Commande*>& commandesPossibles();
+
 		Commande(string c);
+
 		static Commande* nouvelleCommande(string c, LecteurCommandes *lc);
 
 		virtual Commande* constructeurVirtuel(LecteurCommandes *lc)=0;

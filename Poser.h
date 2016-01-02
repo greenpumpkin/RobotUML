@@ -12,11 +12,10 @@ using namespace std;
 
 class Poser : public CommandeRobot {
 	private:
-		static Poser *instance;
 		Objet _old_objet;
 	public:
-		Poser(string c);
-		Poser(): CommandeRobot("Poser"){}
+		//Poser(string c);
+		Poser(Robot *r): CommandeRobot("Poser",r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

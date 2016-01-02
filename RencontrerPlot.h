@@ -13,11 +13,10 @@ using namespace std;
 
 class RencontrerPlot : public CommandeRobot {
 	private:
-		static RencontrerPlot *instance;
 		Plot _plot;
 	public:
-		RencontrerPlot(string c);
-		RencontrerPlot(): CommandeRobot("rencontrer plot"){}
+		//RencontrerPlot(string c);
+		RencontrerPlot(Robot *r): CommandeRobot("rencontrer plot",r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

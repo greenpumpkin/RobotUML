@@ -11,11 +11,11 @@ using namespace std;
 
 class Figer : public CommandeRobot {
 	
-	private:
-		static Figer *instance;
 	public:
-		Figer(string c);
-		Figer(): CommandeRobot("Figer"){}
+		
+		/* Figer(string c); */
+
+		Figer(Robot *r): CommandeRobot("Figer", r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

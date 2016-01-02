@@ -12,14 +12,23 @@ using namespace std;
 
 class Avancer : public CommandeRobot {
 	private:
-		static Avancer *instance;
 		int _x;
 		int _y;
 		int _old_x;
 		int _old_y;
 	public:
-		Avancer(string c);
-		Avancer(): CommandeRobot("avancer"){}
+		
+		//Avancer(string c);
+
+		Avancer(Robot * r) : CommandeRobot("avancer",r)
+		 {
+			r = recepteur;
+			_x = r->getPosition().getX();
+			_y = r->getPosition().getY();
+		}
+
+		;
+
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

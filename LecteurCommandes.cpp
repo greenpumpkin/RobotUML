@@ -25,6 +25,7 @@ void LecteurCommandes::execFichier(){
 	string ligne;
 	for(auto it = Commande::commandesPossibles().cbegin(); it != Commande::commandesPossibles().cend(); ++it)
 	{
+		//cout << it->first << endl;
 		commandes.push_back(it->first);
 	}
  	while(getline(fichierEntree, ligne)){

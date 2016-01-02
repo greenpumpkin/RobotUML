@@ -2,17 +2,14 @@
 
 using namespace std;
 
-Tourner * Tourner::instance = new Tourner();
-
 Commande* Tourner::constructeurVirtuel(LecteurCommandes *lc){
 	_direction=lc->getDirection("Donner une direction (N, O, S ou E): ");
-	recepteur=lc->getRobot();
 	_old_direction=recepteur->getDirection();
-	return instance;
+	return new Tourner(recepteur);
 }
 
 void Tourner::execute(){
-	commandesExecutees().push(instance);
+	commandesExecutees().push(this);
 	recepteur->tourner(_direction);
 }
 

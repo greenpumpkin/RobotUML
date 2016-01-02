@@ -11,12 +11,11 @@ using namespace std;
 
 class Tourner : public CommandeRobot {
 	private:
-		static Tourner *instance;
 		string _direction;
 		string _old_direction;
 	public:
-		Tourner(string c);
-		Tourner(): CommandeRobot("tourner"){}
+		//Tourner(string c);
+		Tourner(Robot *r): CommandeRobot("tourner",r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

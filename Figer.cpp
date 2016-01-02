@@ -1,15 +1,12 @@
 #include "Figer.h"
 using namespace std;
 
-Figer * Figer::instance = new Figer();
-
 Commande* Figer::constructeurVirtuel(LecteurCommandes *lc){
-	recepteur=lc->getRobot();
-	return instance;
+	return new Figer(recepteur);
 }
 
 void Figer::execute(){
-	commandesExecutees().push(instance);
+	commandesExecutees().push(this);
 	recepteur->figer();
 }
 

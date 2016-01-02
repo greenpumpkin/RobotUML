@@ -10,11 +10,10 @@ using namespace std;
 #define _COMMANDE_REPARTIR_H
 
 class Repartir : public CommandeRobot {
-	private:
-		static Repartir *instance;
+	
 	public:
-		Repartir(string c);
-		Repartir(): CommandeRobot("repartir"){}
+		//Repartir(string c);
+		Repartir(Robot *r): CommandeRobot("repartir",r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

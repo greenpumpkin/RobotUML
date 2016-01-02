@@ -2,15 +2,12 @@
 
 using namespace std;
 
-Repartir * Repartir::instance = new Repartir();
-
 Commande* Repartir::constructeurVirtuel(LecteurCommandes *lc){
-	recepteur=lc->getRobot();
-	return instance;
+	return new Repartir(recepteur);
 }
 
 void Repartir::execute(){
-	commandesExecutees().push(instance);
+	commandesExecutees().push(this);
 	recepteur->repartir();
 }
 

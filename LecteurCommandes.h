@@ -11,14 +11,14 @@ using namespace std;
 class LecteurCommandes {
 	private:
 		istream& fichierEntree;
-		Robot *robot;
+		
 	public:
-		LecteurCommandes(istream& is, Robot *r) : fichierEntree(is), robot(r){}
-		LecteurCommandes(Robot *r) : fichierEntree(cin), robot(r){}
+		
+		LecteurCommandes(istream& is) : fichierEntree(is) {}
+		LecteurCommandes() : fichierEntree(cin) {}
 
 		void execFichier();
 
-		Robot *getRobot(){return robot;}
 		int getInt(string message);
 		bool isNumber(string s);
 		string getDirection(string message);

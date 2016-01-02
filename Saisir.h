@@ -12,11 +12,10 @@ using namespace std;
 
 class Saisir : public CommandeRobot {
 	private:
-		static Saisir *instance;
 		Objet _obj;
 	public:
-		Saisir(string c);
-		Saisir(): CommandeRobot("saisir"){}
+		///Saisir(string c);
+		Saisir(Robot *r): CommandeRobot("saisir",r) {}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

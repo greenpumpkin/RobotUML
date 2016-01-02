@@ -10,12 +10,12 @@ using namespace std;
 #define _EVALUER_PLOT_H
 
 class EvaluerPlot : public CommandeRobot {
-	
-	private:
-		static EvaluerPlot *instance;
+
 	public:
-		EvaluerPlot(string c);
-		EvaluerPlot(): CommandeRobot("evaluer plot"){}
+		
+		/* EvaluerPlot(string c); */
+		
+		EvaluerPlot(Robot *r): CommandeRobot("evaluer plot",r){}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
