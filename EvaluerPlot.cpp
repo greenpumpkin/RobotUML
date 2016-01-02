@@ -10,6 +10,7 @@ Commande* EvaluerPlot::constructeurVirtuel(LecteurCommandes *lc){
 }
 
 void EvaluerPlot::execute(){
+	commandesExecutees().push(instance);
 	recepteur->evaluerPlot();
 }
 

@@ -10,6 +10,7 @@ Commande* Peser::constructeurVirtuel(LecteurCommandes *lc){
 }
 
 void Peser::execute(){
+	commandesExecutees().push(instance);
 	recepteur->peser();
 }
 
