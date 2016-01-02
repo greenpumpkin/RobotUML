@@ -22,34 +22,28 @@ bool isCommande(string ligne)
 
 
 void LecteurCommandes::execFichier(){
+	string ligne;
 	for(auto it = Commande::commandesPossibles().cbegin(); it != Commande::commandesPossibles().cend(); ++it)
 	{
 		commandes.push_back(it->first);
 	}
-
-	while(true)
-	{
-		string ligne;
-		cout <<"Commande :"<< endl;
-		cin >> ligne;
-		transform(ligne.begin(), ligne.end(),ligne.begin(), ::tolower);
-		if (!isCommande(ligne)) 
-		{
-			cout <<"Cette commande n'existe pas encore"<< endl;
-		} 
-		else 
-		{
-		Commande * command = Commande::nouvelleCommande(ligne, this);
-		try 
-		{
-		command->execute();	
-		} 
-		catch(Etat::Action_Impossible)
-		{
-		cout <<"Action impossible vu l'état"<< endl;
-		}
-		}
-	}
+ 	while(getline(fichierEntree, ligne)){
+ 		cout<<"----------******------------"<< endl;
+ 		cout <<"Commande :"<< endl;
+		if(ligne=="")
+		transform(ligne.begin(), ligne.end(), ligne.begin(), ::tolower);
+		if(ligne==""){
+ 			getline(fichierEntree, ligne);
+		}else if (!isCommande(ligne)) {
+ 			cout<<"La commande "<<ligne<<" n'existe pas encore."<<endl;
+ 			getline(fichierEntree, ligne);
+ 		}
+ 
+ 		//Créer un objet commande et appeler execute dessus
+ 		Commande *c=Commande::nouvelleCommande(ligne, this);
+ 		c->execute(); 
+ 		//Pas besoin de try catch, on catch déjà l'exception dans Robot.cpp
+ 	}
 }
 
 int LecteurCommandes::getInt(string message){
