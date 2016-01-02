@@ -41,6 +41,9 @@ void LecteurCommandes::execFichier(){
  		//Pas besoin de try catch, on catch déjà l'exception dans Robot.cpp
  		cout<<"----------******------------"<< endl;
  		cout <<"Commande :"<< endl; 	}
+
+ 		fichierEntree.clear();
+ 		fichierEntree.ignore(10000, '\n');
 }
 
 int LecteurCommandes::getInt(string message){
