@@ -43,7 +43,6 @@ void LecteurCommandes::execFichier(){
  		cout <<"Commande :"<< endl; 	}
 
  		fichierEntree.clear();
- 		fichierEntree.ignore(10000, '\n');
 }
 
 int LecteurCommandes::getInt(string message){
