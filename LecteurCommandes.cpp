@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier LecteurCommandes.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <sstream>
 #include <typeinfo>
 #include <vector>

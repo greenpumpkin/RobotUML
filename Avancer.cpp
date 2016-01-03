@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier Avancer.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "Avancer.h"
 
 using namespace std;

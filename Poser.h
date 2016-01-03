@@ -1,3 +1,10 @@
+/*!
+* 
+* Classe Poser.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include <iostream>
 #include <string>
 #include "Commande.h"

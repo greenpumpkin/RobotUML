@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier Saisir.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "Saisir.h"
 
 using namespace std;

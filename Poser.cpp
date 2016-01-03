@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier Poser.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "Poser.h"
 
 using namespace std;

@@ -1,3 +1,9 @@
+/*!
+* 
+* Classe Commande.h
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
 
 #include <iostream>     
 #include <fstream>

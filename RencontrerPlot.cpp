@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier RencontrerPlot.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "RencontrerPlot.h"
 
 using namespace std;

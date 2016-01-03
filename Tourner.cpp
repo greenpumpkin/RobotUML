@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier Tourner.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "Tourner.h"
 
 using namespace std;

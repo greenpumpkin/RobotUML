@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier Defaire.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "Commande.h"
 #include "CommandeRobot.h"
 #include "Defaire.h"

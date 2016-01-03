@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier Figer.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "Figer.h"
 using namespace std;
 

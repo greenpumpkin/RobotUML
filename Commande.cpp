@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier Commande.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "Commande.h"
 
 using namespace std;

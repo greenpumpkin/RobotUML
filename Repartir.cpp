@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier Repartir.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "Repartir.h"
 
 using namespace std;

@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier EvaluerPlot.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "EvaluerPlot.h"
 
 using namespace std;

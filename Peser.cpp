@@ -1,3 +1,10 @@
+/*!
+* 
+* Fichier Peser.cpp
+* Auteurs : Chloé Guglielmi et Cindy Najjar
+*
+*/
+
 #include "Peser.h"
 
 using namespace std;
