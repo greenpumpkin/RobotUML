@@ -19,7 +19,7 @@ using namespace std;
 
 static vector<string> commandes;
 
-bool isCommande(string ligne)
+bool LecteurCommandes::isCommande(string ligne)
 {
 	if(find(commandes.begin(), commandes.end(), ligne) != commandes.end()) {
 		return true;

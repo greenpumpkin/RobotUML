@@ -10,7 +10,6 @@
 using namespace std;
 
 Commande* Poser::constructeurVirtuel(LecteurCommandes *lc){
-	_old_objet= recepteur->getObjet();
 	return new Poser(recepteur);
 }
 

@@ -25,12 +25,12 @@ class Avancer : public CommandeRobot {
 		int _old_y;
 
 	public:
-		
-		//Avancer(string c);
 
 		Avancer(Robot * r, int x = 0, int y = 0) : CommandeRobot("avancer",r)
 		 {
-			r = recepteur;
+			//r = recepteur;
+			_old_x=r->getPosition().getX();
+			_old_y=r->getPosition().getY();
 			_x = x;
 			_y = y;
 		}

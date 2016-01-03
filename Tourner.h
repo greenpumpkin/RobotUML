@@ -21,7 +21,9 @@ class Tourner : public CommandeRobot {
 		string _direction;
 		string _old_direction;
 	public:
-		Tourner(Robot *r, string dir = "N"): CommandeRobot("tourner",r), _direction(dir) {}
+		Tourner(Robot *r, string dir = "N"): CommandeRobot("tourner",r), _direction(dir) {
+			_old_direction=r->getDirection();
+		}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

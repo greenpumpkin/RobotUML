@@ -21,7 +21,9 @@ class Poser : public CommandeRobot {
 	private:
 		Objet _old_objet;
 	public:
-		Poser(Robot *r): CommandeRobot("poser",r){}
+		Poser(Robot *r): CommandeRobot("poser",r){
+			_old_objet=r->getObjet();
+		}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();
