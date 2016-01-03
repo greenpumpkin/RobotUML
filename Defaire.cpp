@@ -12,9 +12,12 @@
 
 using namespace std;
 
+Defaire * Defaire::instance = new Defaire();
+
 Commande* Defaire::constructeurVirtuel(LecteurCommandes *lc){
-	return new Defaire();
+	return instance;
 }
+
 
 void Defaire::execute(){
 	Commande *lastCommande= commandesExecutees().top();
