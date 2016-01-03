@@ -7,7 +7,7 @@ CXX = g++
 CXXFLAGS = -g -std=c++11
 CXX_COMPILE = $(CXX) $(CXXFLAGS) $(INCL)
 
-EXEC = ./Robot
+EXEC = ./Main
 
 SRC_FILES = $(wildcard $(SRC)/*.cpp)
 OBJ_FILES = $(patsubst $(SRC)/%.cpp, $(SRC)/%.o, $(SRC_FILES))
@@ -26,4 +26,4 @@ $(OBJ_FILES): $(SRC)/%.o : $(SRC)/%.cpp
 
 
 clean:
-		rm -rf *.o Robot
+		rm -rf *.o Main
