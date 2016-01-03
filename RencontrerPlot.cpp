@@ -12,7 +12,7 @@ using namespace std;
 Commande* RencontrerPlot::constructeurVirtuel(LecteurCommandes *lc){
 	int hauteur=lc->getInt("Donner un entier pour la hauteur du plot: ");
 	_plot=Plot(hauteur);
-	return new RencontrerPlot(recepteur);
+	return new RencontrerPlot(recepteur,hauteur);
 }
 
 void RencontrerPlot::execute(){

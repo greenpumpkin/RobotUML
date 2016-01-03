@@ -21,7 +21,7 @@ class Saisir : public CommandeRobot {
 	private:
 		Objet _obj;
 	public:
-		Saisir(Robot *r): CommandeRobot("saisir",r) {}
+		Saisir(Robot *r, int poids = 0): CommandeRobot("saisir",r), _obj(poids) {}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

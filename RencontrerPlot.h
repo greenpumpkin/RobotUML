@@ -22,7 +22,7 @@ class RencontrerPlot : public CommandeRobot {
 	private:
 		Plot _plot;
 	public:
-		RencontrerPlot(Robot *r): CommandeRobot("rencontrer plot",r){}
+		RencontrerPlot(Robot *r, int hauteur = 0): CommandeRobot("rencontrer plot",r), _plot(hauteur) {}
 		Commande* constructeurVirtuel(LecteurCommandes *lc);
 
 		void execute();

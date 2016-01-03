@@ -14,7 +14,7 @@ Commande* Avancer::constructeurVirtuel(LecteurCommandes *lc){
 	_y=lc->getInt("Donner un entier pour la position Y: ");
 	_old_x= recepteur->getPosition().getX();
 	_old_y= recepteur->getPosition().getY();
-	return new Avancer(recepteur);
+	return new Avancer(recepteur,_x,_y);
 }
 
 void Avancer::execute(){

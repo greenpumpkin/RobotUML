@@ -23,15 +23,16 @@ class Avancer : public CommandeRobot {
 		int _y;
 		int _old_x;
 		int _old_y;
+
 	public:
 		
 		//Avancer(string c);
 
-		Avancer(Robot * r) : CommandeRobot("avancer",r)
+		Avancer(Robot * r, int x = 0, int y = 0) : CommandeRobot("avancer",r)
 		 {
 			r = recepteur;
-			_x = r->getPosition().getX();
-			_y = r->getPosition().getY();
+			_x = x;
+			_y = y;
 		}
 
 		;
